@@ -19,6 +19,14 @@ export const GlobalStyles = createGlobalStyle`
         align-items: center;
     }
 
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1366px;
+        width: 100%;
+    }
+
     body{
         background-color: ${props=> props.theme.colors.background};
         font-family: Muli, sans-serif;
@@ -69,6 +77,7 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 16px;
         line-height: 20px;
         text-align: justify;
+        margin-bottom: 15px;
 
         @media screen and (max-width: 520px) {
             font-size: 14px;
@@ -154,6 +163,7 @@ export const GlobalStyles = createGlobalStyle`
         overflow-y: scroll;
         transition: 150ms ease-in-out;
         animation: show 250ms;
+        z-index: 2;
 
         @keyframes show {
             0% {
@@ -210,12 +220,26 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     .floatRight {
+        display: flex;
         float: right;
-        margin: 16px 0 30px 100px;
+        margin: 16px 0 30px 150px;
         position: relative;
 
         @media screen and (max-width: 1024px) {
-            display: none;
+            float: none;
+            justify-content: flex-end;
+            align-self: flex-end;
+
+            img {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            img {
+                width: 100%;
+            }
         }
 
         &::after {
@@ -227,7 +251,7 @@ export const GlobalStyles = createGlobalStyle`
             height: 250px;
             background-color: #D96921;
             box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-            z-index: 10;
+            z-index: 1;
             font-family: Muli;
             font-style: normal;
             font-weight: normal;
@@ -237,10 +261,62 @@ export const GlobalStyles = createGlobalStyle`
             color: #F9F9F9;
             padding: 50px;
             position: absolute;
-            top: 35%;
-            left: -40%;
+            top: 40%;
+            left: -7vw;
+
+            @media screen and (max-width: 1024px) {
+                width: 50%;
+                left: -150px;
+                top: 45%;
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 80%;
+                left: -150px;
+                top: 45%;
+            }
+
+            @media screen and (max-width: 480px) {
+                font-size: 16px;
+                line-height: 23px;
+                padding: 25px;
+            }
         }
     }
+
+    .compensation {
+        margin-bottom: 280px;
+
+        @media screen and (max-width: 1024px) {
+            margin-bottom: 0;
+        }
+    }
+
+    .negativeCompensation {
+
+        @media screen and (max-width: 1366px) {
+            margin-top: -50px;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            margin-top: -75px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            margin-top: -90px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            margin-top: 0;
+        }
+    }
+
+    /* .hideMobile {
+
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    } */
 
     .floatLeft {
         margin: -250px 100px 0 0;
@@ -251,44 +327,16 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
-    .centralBox {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 380px;
-        height: 343px;
-        background-color: #D96921;
-        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-
-        p {
-            font-family: Muli;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 25px;
-            text-align: center;
-            color: #F9F9F9;
-            max-width: 320px;
-        }
-    }
-
     .left {
         position: relative;
         float: left;    
         align-self: flex-start;
         width: fit-content;
-
-        div {
-            /* position: absolute;
-            bottom: 300px;
-            right: -300px;
-            float: right; */
-            display: none;
-        }
     }
 
     .clearFloat {
-        clear: both;
+        clear: right;
+        /* border: 1px solid red; */
     }
 
     .goalText {
@@ -309,6 +357,13 @@ export const GlobalStyles = createGlobalStyle`
             color: #D96921;
         }
 
+        /* @media screen and (max-width: 768px) {
+            display: none;
+        } */
+    }
+
+    .hideMobile {
+        
         @media screen and (max-width: 768px) {
             display: none;
         }
