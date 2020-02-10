@@ -3,8 +3,8 @@ import Header from '../../components/Header/Header';
 import PromotionalCard from '../../components/PromotionalCard/PromotionalCard';
 import Modal from '../../components/Modal/Modal';
 
-import FloatRightImage from '../../assets/images/float-right.png';
-import FloatLeftImage from '../../assets/images/float-left.png';
+import FloatRightImage from '../../assets/images/home1.png';
+import FloatLeftImage from '../../assets/images/home2.png';
 
 const Home = () =>{
 	const [showModal, setShowModal] = useState(false);
@@ -12,6 +12,8 @@ const Home = () =>{
 	const toggleModal = () => {
 		setShowModal(!showModal);
 	}
+
+	const whatsappNumber = "5521968062489";
 
 	return (
 		<>
@@ -42,8 +44,6 @@ const Home = () =>{
 
 
 					<section className="left">
-						
-
 						<img src={FloatLeftImage} alt="float" className="floatLeft" />
 					</section>
 
@@ -81,7 +81,7 @@ const Home = () =>{
 				</div>
 			</div>
 
-			<PromotionalCard />
+			<PromotionalCard whatsappNumber={whatsappNumber}/>
 		</>
 	);
 }

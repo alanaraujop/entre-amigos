@@ -17,6 +17,15 @@ export const GlobalStyles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow-x: hidden;
+    }
+
+    #root {
+        padding-bottom: 100px;
+
+        @media screen and (max-width: 768px) {
+            padding-bottom: 50px;
+        }
     }
 
     .mainContainer {
@@ -66,10 +75,6 @@ export const GlobalStyles = createGlobalStyle`
 
         &.justifyRight {
             text-align: right;
-
-            @media screen and (max-width: 1024px) {
-            text-align: left;
-            }
         }
     }
 
@@ -98,43 +103,27 @@ export const GlobalStyles = createGlobalStyle`
         .logoContainer {
             background: linear-gradient(178.31deg, #000000 3.33%, rgba(0, 0, 0, 0) 77.63%);
             width: 100%;
-            min-height: 130px;
+            min-height: 120px;
             height: 20vw;
             max-height: 222px;
             position: absolute;
             top: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            padding: 0 50px;
 
-            .logoName {
-                height: 90%;
-                width: 40%;
+            .logo {
+                width: 100%;
+                max-width: 545px;
+                height: 65%;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: contain;
                 margin-top: 20px;
-                max-width: 425px;
-                margin-right: 20px;
 
                 @media screen and (max-width: 768px) {
-                    margin-top: 0;
-                    height: 80%;
-                    margin-bottom: 15px;
-                }
-            }
-
-            .logo {
-                height: 75%;
-                width: 15%;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-                margin-top: 30px;
-                max-width: 88px;
-
-                @media screen and (max-width: 768px) {
-                    margin-top: 0;
+                    margin-top: 10px;
                 }
             }
         }
@@ -225,21 +214,66 @@ export const GlobalStyles = createGlobalStyle`
         margin: 16px 0 30px 150px;
         position: relative;
 
+        img {
+            max-width: 596px;
+            max-height: 463px;
+            box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+        }
+
         @media screen and (max-width: 1024px) {
             float: none;
             justify-content: flex-end;
             align-self: flex-end;
+            margin-top: 25px;
+            margin-bottom: 75px;
 
             img {
                 width: 80%;
             }
         }
 
+        @media screen and (max-width: 920px) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (max-width: 860px) {
+            margin-bottom: 95px;
+        }
+
+        @media screen and (max-width: 800px) {
+            margin-bottom: 110px;
+        }
+
         @media screen and (max-width: 768px) {
+            margin-bottom: 50px;
 
             img {
                 width: 100%;
             }
+        }
+
+        @media screen and (max-width: 720px) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (max-width: 580px) {
+            margin-bottom: 50px;
+        }
+
+        @media screen and (max-width: 440px) {
+            margin-bottom: 75px;
+        }
+
+        @media screen and (max-width: 440px) {
+            margin-bottom: 95px;
+        }
+
+        @media screen and (max-width: 410px) {
+            margin-bottom: 120px;
+        }
+
+        @media screen and (max-width: 360px) {
+            margin-bottom: 140px;
         }
 
         &::after {
@@ -268,18 +302,15 @@ export const GlobalStyles = createGlobalStyle`
                 width: 50%;
                 left: -150px;
                 top: 45%;
+                padding: 25px 50px;
             }
 
-            @media screen and (max-width: 768px) {
-                width: 80%;
-                left: -150px;
-                top: 45%;
-            }
-
-            @media screen and (max-width: 480px) {
-                font-size: 16px;
+            @media screen and (max-width: 580px) {
+                font-size: 14px;
+                width: 184px;
+                height: 160px;
                 line-height: 23px;
-                padding: 25px;
+                padding: 15px 25px;
             }
         }
     }
@@ -319,8 +350,11 @@ export const GlobalStyles = createGlobalStyle`
     } */
 
     .floatLeft {
-        margin: -250px 100px 0 0;
+        margin: -250px 110px 10px 0;
         align-self: flex-start;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+        max-width: 692px;
+        max-height: 491px;
 
         @media screen and (max-width: 1024px) {
             display: none;
@@ -344,7 +378,7 @@ export const GlobalStyles = createGlobalStyle`
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin: 50px 0;
+        margin: 20px 0;
 
         p {
             width: 100%;
@@ -357,9 +391,9 @@ export const GlobalStyles = createGlobalStyle`
             color: #D96921;
         }
 
-        /* @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) {
             display: none;
-        } */
+        }
     }
 
     .hideMobile {
