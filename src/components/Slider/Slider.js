@@ -27,18 +27,18 @@ const Slider = () => {
         centerSlidePercentage={100}
       >
         <picture>
-          <source media="(min-width: 768px)" srcset={carousel1} />
-          <source media="(max-width: 767px)" srcset={carousel1Mobile} />
+          <source media="(min-width: 768px)" srcSet={carousel1} />
+          <source media="(max-width: 767px)" srcSet={carousel1Mobile} />
           <img src={carousel1} alt="Entre Amigos" />
         </picture>
         <picture>
-          <source media="(min-width: 768px)" srcset={carousel1} />
-          <source media="(max-width: 767px)" srcset={carousel1Mobile} />
+          <source media="(min-width: 768px)" srcSet={carousel1} />
+          <source media="(max-width: 767px)" srcSet={carousel1Mobile} />
           <img src={carousel1} alt="Entre Amigos" />
         </picture>
         <picture>
-          <source media="(min-width: 768px)" srcset={carousel1} />
-          <source media="(max-width: 767px)" srcset={carousel1Mobile} />
+          <source media="(min-width: 768px)" srcSet={carousel1} />
+          <source media="(max-width: 767px)" srcSet={carousel1Mobile} />
           <img src={carousel1} alt="Entre Amigos" />
         </picture>
       </Carousel>
