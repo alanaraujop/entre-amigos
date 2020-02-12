@@ -90,15 +90,8 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
-    .header {
-        position: relative;
-        min-height: 240px;
+    .carouselContainer {
         margin-bottom: 35px;
-        width: 100vw;
-
-        @media screen and (max-width: 520px) {
-            margin-bottom: 10px;
-        }
 
         .logoContainer {
             background: linear-gradient(178.31deg, #000000 3.33%, rgba(0, 0, 0, 0) 77.63%);
@@ -112,6 +105,7 @@ export const GlobalStyles = createGlobalStyle`
             justify-content: center;
             align-items: flex-start;
             padding: 0 50px;
+            z-index: 2;
 
             .logo {
                 width: 100%;
@@ -128,15 +122,42 @@ export const GlobalStyles = createGlobalStyle`
             }
         }
 
-        .headerBackground {
-            width: 100%;
-            min-height: 240px;
-            height: 40vw;
-            max-height: 630px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
+        .carousel {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            min-height: 240px;
+    
+            .slider-wrapper {
+                min-height: 240px;
+    
+                img {
+                    min-height: 240px;
+                }
+            }
+    
+            .control-dots {
+    
+                .dot {
+                    background-color: #fff;
+                    box-shadow: none;
+                    opacity: 1;
+                    width: 10px;
+                    height: 10px;
+                    outline: none;
+    
+                    &.selected {
+                        background-color: #D97F2D;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 520px) {
+            margin-bottom: 10px;
         }
     }
 
