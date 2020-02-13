@@ -125,7 +125,6 @@ export const GlobalStyles = createGlobalStyle`
         .carousel {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             min-height: 240px;
-            max-height: 720px;
     
             .slider-wrapper {
                 min-height: 240px;
