@@ -20,14 +20,6 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
     }
 
-    #root {
-        padding-bottom: 100px;
-
-        @media screen and (max-width: 768px) {
-            padding-bottom: 50px;
-        }
-    }
-
     .mainContainer {
         display: flex;
         flex-direction: column;
@@ -125,9 +117,11 @@ export const GlobalStyles = createGlobalStyle`
         .carousel {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             min-height: 240px;
+            background-color: #fff;
     
             .slider-wrapper {
                 min-height: 240px;
+                background-color: #fff;
     
                 img {
                     min-height: 240px;
@@ -456,7 +450,7 @@ export const GlobalStyles = createGlobalStyle`
         height: 140px;
         max-width: 1144px;
         width: 100%;
-        margin: 18px auto;
+        margin: 18px auto 50px auto;
         padding: 0 7%;
 
         @media screen and (max-width: 520px) {
