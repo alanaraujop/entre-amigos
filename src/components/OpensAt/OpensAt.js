@@ -4,9 +4,11 @@ import { DateAndTime } from './styles';
 const OpensAt = props => {
 
   return (
-    <DateAndTime>
-      {props.info}
-    </DateAndTime>
+    <div className="container">
+      <DateAndTime>
+        {props.info}
+      </DateAndTime>
+    </div>
   );
 };
 

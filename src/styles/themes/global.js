@@ -85,6 +85,7 @@ export const GlobalStyles = createGlobalStyle`
 
     .carouselContainer {
         margin-bottom: 35px;
+        position: relative;
 
         .logoContainer {
             background: linear-gradient(178.31deg, #000000 3.33%, rgba(0, 0, 0, 0) 77.63%);
