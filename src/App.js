@@ -5,6 +5,7 @@ import { GlobalStyles } from './styles/themes/global';
 import usePersistedThemeState from './utils/usePersistedThemeState';
 import light from './styles/themes/light';
 import Footer from './components/Footer';
+import Header from './components/Header';
 // import dark from './styles/themes/dark';
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
+      <Header />
       <Routes />
       <Footer />
     </ThemeProvider>
