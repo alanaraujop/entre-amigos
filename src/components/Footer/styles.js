@@ -8,6 +8,7 @@ export const PageFooter = styled.footer`
   height: 128px;
   background: linear-gradient(180deg, rgba(196, 195, 195, 0.12) 0%, #C4C3C3 100%);
   position: relative;
+  z-index: 2;
 
   &::before {
     content: "";
@@ -64,6 +65,17 @@ export const PageFooter = styled.footer`
     img {
       width: 80px;
       height: 101px;
+    }
+  }
+
+  @media screen and (max-width: 325px) {
+    
+    .footer-title {
+      font-size: 16px;
+    }
+
+    .footer-logo {
+      margin-left: 2px;
     }
   }
 `;

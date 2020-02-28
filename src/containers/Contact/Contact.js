@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContactContainer, InfoContainer } from './styles';
 import MapLocation from '../../components/MapLocation';
 import OpensAt from '../../components/OpensAt';
 import ContactForm from '../../components/ContactForm';
@@ -10,11 +11,15 @@ const Contact = () => {
   const info = "Funcionamos de sexta à domingo, das 19h às 00:00h.";
 
   return (
-    <>
-      <ContactForm />
-      <MapLocation location={locationURL} />
-      <OpensAt info={info} />
-    </>
+    <ContactContainer>
+      <div className="container contact-container">
+        <ContactForm />
+        <InfoContainer>
+          <MapLocation location={locationURL} />
+          <OpensAt info={info} />
+        </InfoContainer>
+      </div>
+    </ContactContainer>
   );
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import { ShadowContainer } from './styles';
 import carousel1 from '../../assets/images/carousel_1.png';
 import carousel1Mobile from '../../assets/images/carousel_1_mobile.png';
 import carousel2 from '../../assets/images/carousel_2.png';
@@ -13,9 +14,10 @@ const Slider = () => {
 
   return (
     <div className="carouselContainer">
-      <div className="logoContainer">
+      {/* <div className="logoContainer">
         <div className="logo" style={{backgroundImage: `url(${logo})`}} />
-      </div>
+      </div> */}
+      <ShadowContainer />
       <Carousel
         showArrows={false}
         showStatus={false}

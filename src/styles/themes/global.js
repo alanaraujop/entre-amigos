@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Muli:400,600&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
 
     *{
         margin: 0;
@@ -119,6 +120,7 @@ export const GlobalStyles = createGlobalStyle`
         .carousel {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             min-height: 240px;
+            max-height: 768px;
             background-color: #fff;
     
             .slider-wrapper {
@@ -461,17 +463,21 @@ export const GlobalStyles = createGlobalStyle`
 
         span {
             font-weight: bold;
-            font-size: 31px;
+            font-size: 30px;
             line-height: 39px;
             color: "#282828";
             display: block;
-            max-width: 464px;
+            max-width: 550px;
             margin-right: 50px;
+
+            @media screen and (max-width: 920px) {
+                font-size: 28px;
+            }
 
             @media screen and (max-width: 768px) {
                 font-size: 24px;
                 line-height: 32px;
-                margin-right: 20px;
+                margin-right: 30px;
             }
 
             @media screen and (max-width: 520px) {
