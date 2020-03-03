@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Muli:400,600&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
 
     *{
         margin: 0;
@@ -14,18 +15,11 @@ export const GlobalStyles = createGlobalStyle`
     body,
     #root {
         min-height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         overflow-x: hidden;
-    }
-
-    #root {
-        padding-bottom: 100px;
-
-        @media screen and (max-width: 768px) {
-            padding-bottom: 50px;
-        }
     }
 
     .mainContainer {
@@ -90,15 +84,9 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
-    .header {
-        position: relative;
-        min-height: 240px;
+    .carouselContainer {
         margin-bottom: 35px;
-        width: 100vw;
-
-        @media screen and (max-width: 520px) {
-            margin-bottom: 10px;
-        }
+        position: relative;
 
         .logoContainer {
             background: linear-gradient(178.31deg, #000000 3.33%, rgba(0, 0, 0, 0) 77.63%);
@@ -112,6 +100,7 @@ export const GlobalStyles = createGlobalStyle`
             justify-content: center;
             align-items: flex-start;
             padding: 0 50px;
+            z-index: 2;
 
             .logo {
                 width: 100%;
@@ -128,15 +117,45 @@ export const GlobalStyles = createGlobalStyle`
             }
         }
 
-        .headerBackground {
-            width: 100%;
-            min-height: 240px;
-            height: 40vw;
-            max-height: 630px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
+        .carousel {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            min-height: 240px;
+            max-height: 768px;
+            background-color: #fff;
+    
+            .slider-wrapper {
+                min-height: 240px;
+                background-color: #fff;
+    
+                img {
+                    min-height: 240px;
+                }
+            }
+    
+            .control-dots {
+    
+                .dot {
+                    background-color: #fff;
+                    box-shadow: none;
+                    opacity: 1;
+                    width: 10px;
+                    height: 10px;
+                    outline: none;
+    
+                    &.selected {
+                        background-color: #D97F2D;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 520px) {
+            margin-bottom: 10px;
         }
     }
 
@@ -435,7 +454,7 @@ export const GlobalStyles = createGlobalStyle`
         height: 140px;
         max-width: 1144px;
         width: 100%;
-        margin: 18px auto;
+        margin: 18px auto 50px auto;
         padding: 0 7%;
 
         @media screen and (max-width: 520px) {
@@ -444,17 +463,21 @@ export const GlobalStyles = createGlobalStyle`
 
         span {
             font-weight: bold;
-            font-size: 31px;
+            font-size: 30px;
             line-height: 39px;
             color: "#282828";
             display: block;
-            max-width: 464px;
+            max-width: 550px;
             margin-right: 50px;
+
+            @media screen and (max-width: 920px) {
+                font-size: 28px;
+            }
 
             @media screen and (max-width: 768px) {
                 font-size: 24px;
                 line-height: 32px;
-                margin-right: 20px;
+                margin-right: 30px;
             }
 
             @media screen and (max-width: 520px) {

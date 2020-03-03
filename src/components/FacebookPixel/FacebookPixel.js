@@ -1,9 +1,24 @@
+import React, { useEffect } from 'react';
+import { withRouter } from "react-router-dom";
 import ReactPixel from 'react-facebook-pixel';
-
+ 
 const options = {
-  autoconfig: true,
-  debug: false
+  autoConfig: true,
+  debug: false,
 };
 
-ReactPixel.init('219621429066035', options);
-ReactPixel.pageView();
+const FacebookPixel = props => {
+  useEffect(() => {
+    ReactPixel.init('219621429066035', options);
+
+  }, []);
+
+  useEffect(() => {
+    ReactPixel.pageView(props.location.pathname);
+    console.log("here fp");
+  }, [props.location.pathname]);
+
+  return <div/>;
+};
+
+export default withRouter(FacebookPixel);

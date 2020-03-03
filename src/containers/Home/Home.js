@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import Header from '../../components/Header/Header';
 import PromotionalCard from '../../components/PromotionalCard/PromotionalCard';
 import Modal from '../../components/Modal/Modal';
 
 import FloatRightImage from '../../assets/images/home1.png';
 import FloatLeftImage from '../../assets/images/home2.png';
+import Slider from '../../components/Slider/Slider';
 
 const Home = () =>{
 	const [showModal, setShowModal] = useState(false);
@@ -17,7 +17,7 @@ const Home = () =>{
 
 	return (
 		<>
-			<Header />
+			<Slider />
 			{showModal && <Modal toggleModal={toggleModal} />}
 			<div className="mainContainer">
 
