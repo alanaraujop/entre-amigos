@@ -122,5 +122,42 @@ export const EventsContainer = styled.div`
         }
       }
     }
+
+    .reservationContainer {
+      width: 70%;
+      max-width: 680px;
+      text-align: left;
+      margin: 20px auto 30px 0;
+
+      .reservationText {
+        font-family: Muli;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 31px;
+        line-height: 39px;
+        text-align: justify;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.72);
+        margin: 10px 0 25px 0;
+      }
+
+      .reservationButton {
+        text-transform: uppercase;
+        width: fit-content;
+        background: #D96921;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        font-family: Muli;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 31px;
+        text-align: center;
+        color: #F9F9F9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 40px;
+      }
+    }
   }
 `;

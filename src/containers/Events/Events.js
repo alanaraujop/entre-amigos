@@ -46,6 +46,16 @@ const Events = () => {
 
         </div>
 
+        <div className="mainContainer">
+          <div className="reservationContainer">
+            <p className="reservationText">
+              Faça do seu evento com o Entre Amigos Gastronomia um banquete único, repleto de sentimentos, sabores e grandes lembranças da história de uma casa conhecida  mundialmente.
+            </p>
+
+            <div className="reservationButton">Reserve agora</div>
+          </div>
+        </div>
+
       </div>
     </EventsContainer>
   );
