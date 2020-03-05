@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.js": "/alantechsafe/entre-amigos/static/js/main.dc63ebe7.chunk.js",
+    "main.js.map": "/alantechsafe/entre-amigos/static/js/main.dc63ebe7.chunk.js.map",
+    "runtime-main.js": "/alantechsafe/entre-amigos/static/js/runtime-main.d67e373b.js",
+    "runtime-main.js.map": "/alantechsafe/entre-amigos/static/js/runtime-main.d67e373b.js.map",
+    "static/css/2.3c1ddb0a.chunk.css": "/alantechsafe/entre-amigos/static/css/2.3c1ddb0a.chunk.css",
+    "static/js/2.544f2176.chunk.js": "/alantechsafe/entre-amigos/static/js/2.544f2176.chunk.js",
+    "static/js/2.544f2176.chunk.js.map": "/alantechsafe/entre-amigos/static/js/2.544f2176.chunk.js.map",
+    "index.html": "/alantechsafe/entre-amigos/index.html",
+    "precache-manifest.1ef29283b761ca87ea58e2f2e2c4b61f.js": "/alantechsafe/entre-amigos/precache-manifest.1ef29283b761ca87ea58e2f2e2c4b61f.js",
+    "service-worker.js": "/alantechsafe/entre-amigos/service-worker.js",
+    "static/css/2.3c1ddb0a.chunk.css.map": "/alantechsafe/entre-amigos/static/css/2.3c1ddb0a.chunk.css.map",
+    "static/js/2.544f2176.chunk.js.LICENSE": "/alantechsafe/entre-amigos/static/js/2.544f2176.chunk.js.LICENSE",
+    "static/media/carousel_1.png": "/alantechsafe/entre-amigos/static/media/carousel_1.279bc916.png",
+    "static/media/carousel_1_mobile.png": "/alantechsafe/entre-amigos/static/media/carousel_1_mobile.a8a5600a.png",
+    "static/media/carousel_2.png": "/alantechsafe/entre-amigos/static/media/carousel_2.122fc3c6.png",
+    "static/media/carousel_2_mobile.png": "/alantechsafe/entre-amigos/static/media/carousel_2_mobile.441ac5bf.png",
+    "static/media/carousel_3.png": "/alantechsafe/entre-amigos/static/media/carousel_3.9dff8e4c.png",
+    "static/media/carousel_3_mobile.png": "/alantechsafe/entre-amigos/static/media/carousel_3_mobile.bb2589ee.png",
+    "static/media/events_parallax.png": "/alantechsafe/entre-amigos/static/media/events_parallax.0436635d.png",
+    "static/media/home1.png": "/alantechsafe/entre-amigos/static/media/home1.eb224b6b.png",
+    "static/media/home2.png": "/alantechsafe/entre-amigos/static/media/home2.9810351c.png",
+    "static/media/logo.png": "/alantechsafe/entre-amigos/static/media/logo.54b78e41.png",
+    "static/media/logo_footer.png": "/alantechsafe/entre-amigos/static/media/logo_footer.0ff543fa.png",
+    "static/media/logo_header.png": "/alantechsafe/entre-amigos/static/media/logo_header.2abc4dac.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d67e373b.js",
+    "static/css/2.3c1ddb0a.chunk.css",
+    "static/js/2.544f2176.chunk.js",
+    "static/js/main.dc63ebe7.chunk.js"
+  ]
+}
