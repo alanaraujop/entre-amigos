@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3f7a5ac3cc0276cc2cd67cee1afafb1d",
+    "revision": "8746443f181678a4c97deac75d48474d",
     "url": "/entre-amigos/index.html"
   },
   {
-    "revision": "4ed707188c696d9077e1",
+    "revision": "77000945254344ffca13",
     "url": "/entre-amigos/static/css/2.3c1ddb0a.chunk.css"
   },
   {
-    "revision": "4ed707188c696d9077e1",
-    "url": "/entre-amigos/static/js/2.e4752b72.chunk.js"
+    "revision": "77000945254344ffca13",
+    "url": "/entre-amigos/static/js/2.a6b7935f.chunk.js"
   },
   {
     "revision": "ada7f74f4e5976853df965c07cb4cc8f",
-    "url": "/entre-amigos/static/js/2.e4752b72.chunk.js.LICENSE"
+    "url": "/entre-amigos/static/js/2.a6b7935f.chunk.js.LICENSE"
   },
   {
-    "revision": "a9717a56ab08afd3e5ca",
-    "url": "/entre-amigos/static/js/main.dc63ebe7.chunk.js"
+    "revision": "c3c7beb6fb6fb05497a6",
+    "url": "/entre-amigos/static/js/main.3b495a8a.chunk.js"
   },
   {
     "revision": "da3980921271ecf08e88",
