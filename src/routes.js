@@ -15,7 +15,7 @@ import Footer from "./components/Footer";
 
 export default function Routes() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.REACT_APP_PUBLIC_URL}>
       <Analytics />
       <FacebookPixel />
       <Header />
@@ -26,7 +26,7 @@ export default function Routes() {
         <Route exact path="/eventos" component={Events} />
         <Route exact path="/contato" component={Contact} />
       </Switch>
-      <Footer /> 
+      <Footer />
     </BrowserRouter>
   );
 }
