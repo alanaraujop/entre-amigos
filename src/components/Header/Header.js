@@ -6,6 +6,30 @@ import LogoHeader from '../../assets/images/logo_header.png';
 
 const Header = () => {
 
+  let prevScrollpos = window.pageYOffset;
+  console.log(prevScrollpos);
+
+  
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    let parentContainer = document.querySelector(".carouselContainer");
+
+    // console.log(parentContainer.offsetHeight);
+    // console.log(prevScrollpos, "prev");
+    // console.log((currentScrollPos / 100) / 5);
+    
+    let percentage = parentContainer.offsetHeight / currentScrollPos;
+    console.log(percentage);
+
+      if (currentScrollPos > parentContainer.offsetHeight) {
+        document.querySelector(".header-container").style.opacity = 0;
+      } else {
+        // console.log(currentScrollPos, "current");
+        document.querySelector(".header-container").style.opacity = currentScrollPos / 500;
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
   return (
     <MainHeader>
       <div className="container header-container">
