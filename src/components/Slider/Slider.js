@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { ShadowContainer } from './styles';
@@ -8,15 +8,41 @@ import carousel2 from '../../assets/images/carousel_2.png';
 import carousel2Mobile from '../../assets/images/carousel_2_mobile.png';
 import carousel3 from '../../assets/images/carousel_3.png';
 import carousel3Mobile from '../../assets/images/carousel_3_mobile.png';
-import logo from '../../assets/images/logo.png';
 
 const Slider = () => {
+  // const [componentHeight, setComponentHeight] = useState(0);
+  // const [elementHeight, setElementHeight] = useState(0);
+  // const test = useRef(null);
+  // let element;
+
+  // const div = useCallback(node => {
+  //   if (node !== null) {
+  //     setComponentHeight(node.getBoundingClientRect());
+  //     // setWidth(node.getBoundingClientRect().width);
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   setComponentHeight(test.current.clientHeight);
+  //   element = document.querySelector('.imagem');
+  //   setElementHeight(element.clientHeight);
+  // }, []);
+
+  // useEffect(() => {
+
+  //   if (test.current) {
+  //     setComponentHeight(test.current.clientHeight);
+  //   }
+  // }, [test]);
+
+  // useEffect(() => {
+  //   console.log(componentHeight, 'componentHeight');
+  //   console.log(elementHeight, 'elementHeight');
+
+  // }, [elementHeight]);
 
   return (
     <div className="carouselContainer">
-      {/* <div className="logoContainer">
-        <div className="logo" style={{backgroundImage: `url(${logo})`}} />
-      </div> */}
       <ShadowContainer />
       <Carousel
         showArrows={false}
@@ -33,7 +59,7 @@ const Slider = () => {
         centerSlidePercentage={100}
       >
         <picture>
-          <source media="(min-width: 768px)" srcSet={carousel1} />
+          <source media="(min-width: 768px)" srcSet={carousel1} className="imagem" />
           <source media="(max-width: 767px)" srcSet={carousel1Mobile} />
           <img src={carousel1} alt="Entre Amigos" />
         </picture>

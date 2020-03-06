@@ -13,6 +13,7 @@ const Header = () => {
           <img src={LogoHeader} alt="Logo do Entre Amigos Gastronomia" />
         </Link>
           <Nav>
+            <NavLink to="/" exact activeClassName="active">Home</NavLink>
             <NavLink to="/nossos-pratos" activeClassName="active">Nossos pratos</NavLink>
             <NavLink to="/galeria" activeClassName="active">Galeria</NavLink>
             <NavLink to="/eventos" activeClassName="active">Eventos</NavLink>

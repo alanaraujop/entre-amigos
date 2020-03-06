@@ -9,7 +9,7 @@ export const EventsContainer = styled.div`
   .main-container {
     background-image: url(${Background});
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 50px;
@@ -29,6 +29,13 @@ export const EventsContainer = styled.div`
       color: #FFF;
       margin-bottom: 25px;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.72);
+      padding: 0 40px;
+
+      @media screen and (max-width: 480px) {
+        padding: 0 16px;
+        font-size: 20px;
+        line-height: 43px;
+      }
     }
 
     .strip {
@@ -54,9 +61,10 @@ export const EventsContainer = styled.div`
       .round-boxes {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
 
         .round-box {
-          margin: 30px 20px 0;
+          margin: 30px 20px 20px;
           width: 265px;
           height: 265px;
           position: relative;
@@ -82,8 +90,40 @@ export const EventsContainer = styled.div`
             font-size: 28px;
             line-height: 36px;
             text-align: center;
-            color: #FF9535;
             margin: 40px;
+          }
+
+          &:nth-child(1) {
+
+            .box-title {
+              color: #FF9535;
+            }
+
+            &:hover {
+              background-color: #FF9535;
+            }
+          }
+
+          &:nth-child(2) {
+
+            .box-title {
+              color: #FF8433;
+            }
+
+            &:hover {
+              background-color: #FF8433;
+            }
+          }
+
+          &:nth-child(3) {
+
+            .box-title{
+              color: #D96921;
+            }
+
+            &:hover {
+              background-color: #D96921;
+            }
           }
 
           .box-text {
@@ -91,7 +131,6 @@ export const EventsContainer = styled.div`
           }
 
           &:hover {
-            background-color: #FF9535;
 
             .box-title {
               display: none;
@@ -121,13 +160,24 @@ export const EventsContainer = styled.div`
           }
         }
       }
+
+      /* @media screen and (max-width: 768px) {
+
+        .round-boxes {
+
+          .round-box {
+            width: 160px;
+            height: 160px;
+          }
+        }
+      } */
     }
 
     .reservationContainer {
       width: 70%;
-      max-width: 680px;
+      max-width: 1144px;
       text-align: left;
-      margin: 20px auto 30px 0;
+      margin: 20px auto 30px auto;
 
       .reservationText {
         font-family: Muli;
@@ -139,13 +189,16 @@ export const EventsContainer = styled.div`
         color: #FFFFFF;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.72);
         margin: 10px 0 25px 0;
+        max-width: 680px;
+        min-width: 280px;
+        width: 65%;
       }
 
       .reservationButton {
         text-transform: uppercase;
         width: fit-content;
         background: #D96921;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
         font-family: Muli;
         font-style: normal;
@@ -157,6 +210,61 @@ export const EventsContainer = styled.div`
         align-items: center;
         justify-content: center;
         padding: 10px 40px;
+        margin-bottom: 25px;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 1600px) {
+
+        .reservationText {
+          font-size: 28px;
+        }
+
+        .reservationButton {
+          font-size: 26px;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .reservationText {
+          font-size: 28px;
+          text-align: center;
+          width: 100%;
+        }
+
+        .reservationButton {
+          font-size: 26px;
+        }
+      }
+
+      @media screen and (max-width: 640px) {
+
+        .reservationText {
+          font-size: 22px;
+          line-height: 30px;
+        }
+
+        .reservationButton {
+          font-size: 20px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+
+        .reservationText {
+          font-size: 18px;
+          line-height: 23px;
+        }
+
+        .reservationButton {
+          font-size: 18px;
+          padding: 10px 30px;
+        }
       }
     }
   }

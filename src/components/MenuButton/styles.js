@@ -14,11 +14,3 @@ export const Button = styled.div`
   }
 
 `;
-
-export const ButtonLine = styled.span`
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: #fff;
-  margin: 2px 0;
-`;
