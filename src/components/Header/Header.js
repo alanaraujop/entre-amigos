@@ -1,38 +1,57 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { MainHeader, Nav } from './styles';
 import MenuButton from '../MenuButton';
 import LogoHeader from '../../assets/images/logo_header.png';
 
 const Header = () => {
+  const location = useLocation();
+  const pathname = location.pathname;
+  const opacityValue = pathname === '/' ? 0 : 1;
+
+  useEffect(() => {
+    if (pathname === '/') {
+      window.addEventListener('scroll', opacityEffect);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', opacityEffect);
+    }
+
+  }, [location.pathname])
 
   let prevScrollpos = window.pageYOffset;
-  console.log(prevScrollpos);
 
-  
-  window.onscroll = function() {
+  const opacityEffect = () => {
     var currentScrollPos = window.pageYOffset;
     let parentContainer = document.querySelector(".carouselContainer");
+    const parentHeight = parentContainer.offsetHeight;
+    const headerBackground = document.querySelector(".header-background");
 
-    // console.log(parentContainer.offsetHeight);
-    // console.log(prevScrollpos, "prev");
-    // console.log((currentScrollPos / 100) / 5);
-    
-    let percentage = parentContainer.offsetHeight / currentScrollPos;
-    console.log(percentage);
-
-      if (currentScrollPos > parentContainer.offsetHeight) {
-        document.querySelector(".header-container").style.opacity = 0;
-      } else {
-        // console.log(currentScrollPos, "current");
-        document.querySelector(".header-container").style.opacity = currentScrollPos / 500;
-      }
-      prevScrollpos = currentScrollPos;
+    if (parentHeight === 240) {
+      headerBackground.style.opacity = currentScrollPos / 185;
     }
+    if (parentHeight < 400) {
+      headerBackground.style.opacity = currentScrollPos / 220;
+    }
+    else if (parentHeight < 600) {
+      headerBackground.style.opacity = currentScrollPos / 350;
+    }
+    else {
+      headerBackground.style.opacity = currentScrollPos / 550;
+    }
+    
+    prevScrollpos = currentScrollPos;
+  }
 
   return (
     <MainHeader>
       <div className="container header-container">
+        <div 
+          className="header-background"
+          style={{opacity: opacityValue}} 
+        />
         <Link to="/">
           <img src={LogoHeader} alt="Logo do Entre Amigos Gastronomia" />
         </Link>
@@ -47,6 +66,6 @@ const Header = () => {
       </div>
     </MainHeader>
   );
-}
+};
 
 export default Header;

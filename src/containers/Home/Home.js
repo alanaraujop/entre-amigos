@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PromotionalCard from '../../components/PromotionalCard/PromotionalCard';
 import Modal from '../../components/Modal/Modal';
-
 import FloatRightImage from '../../assets/images/home1.png';
 import FloatLeftImage from '../../assets/images/home2.png';
 import Slider from '../../components/Slider/Slider';
@@ -11,7 +10,10 @@ const Home = () =>{
 
 	const toggleModal = () => {
 		setShowModal(!showModal);
-	}
+	};
+
+	const element = document.querySelector(".mainContainer");
+	console.log(element)
 
 	const whatsappNumber = "5521968062489";
 

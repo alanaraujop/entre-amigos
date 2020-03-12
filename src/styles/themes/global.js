@@ -171,7 +171,7 @@ export const GlobalStyles = createGlobalStyle`
         overflow-y: scroll;
         transition: 150ms ease-in-out;
         animation: show 250ms;
-        z-index: 2;
+        z-index: 4;
 
         @keyframes show {
             0% {
