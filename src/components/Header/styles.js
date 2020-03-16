@@ -69,7 +69,11 @@ export const Nav = styled.nav`
       margin-right: 0;
     }
 
-    &.active::after {
+    &.active {
+      background-color: #0003;
+    }
+
+    /* &.active::after {
       content: "";
       display: block;
       width: 100%;
@@ -78,7 +82,7 @@ export const Nav = styled.nav`
       position: absolute;
       top: 0;
       left: 0;
-    }
+    } */
   }
 
   @media screen and (max-width: 1024px) {
