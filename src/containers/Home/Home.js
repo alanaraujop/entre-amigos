@@ -23,7 +23,7 @@ const Home = () =>{
 			{showModal && <Modal toggleModal={toggleModal} />}
 			<div className="mainContainer">
 
-				<section>
+				{/* <section>
 					<h2 className="container">UMA NOVA HISTÓRIA</h2>
 
 					<p className="container">
@@ -70,17 +70,17 @@ const Home = () =>{
 						</p>
 
 					</section>
-				</section>
+				</section> */}
 
-				<div className="moreButton" onClick={toggleModal}>
+				{/* <div className="moreButton" onClick={toggleModal}>
 					Conheça mais
-				</div>
+				</div> */}
 
-				<div className="container goalText">
+				{/* <div className="container goalText">
 					<p>
 						Reunir pessoas em um ambiente familiar e acolhedor, além de nos tornarmos referência em comida portuguesa no Rio de Janeiro, mantendo preço justo e acessível a todos: esse é o principal foco da nossa união.
 					</p>
-				</div>
+				</div> */}
 			</div>
 
 			<PromotionalCard whatsappNumber={whatsappNumber}/>

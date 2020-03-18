@@ -227,7 +227,7 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
-    .floatRight {
+    /* .floatRight {
         display: flex;
         float: right;
         margin: 16px 0 30px 150px;
@@ -332,17 +332,17 @@ export const GlobalStyles = createGlobalStyle`
                 padding: 15px 25px;
             }
         }
-    }
+    } */
 
-    .compensation {
+    /* .compensation {
         margin-bottom: 280px;
 
         @media screen and (max-width: 1024px) {
             margin-bottom: 0;
         }
-    }
+    } */
 
-    .negativeCompensation {
+    /* .negativeCompensation {
 
         @media screen and (max-width: 1366px) {
             margin-top: -50px;
@@ -359,16 +359,9 @@ export const GlobalStyles = createGlobalStyle`
         @media screen and (max-width: 1100px) {
             margin-top: 0;
         }
-    }
-
-    /* .hideMobile {
-
-        @media screen and (max-width: 1024px) {
-            display: none;
-        }
     } */
 
-    .floatLeft {
+    /* .floatLeft {
         margin: -250px 110px 10px 0;
         align-self: flex-start;
         box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
@@ -378,21 +371,20 @@ export const GlobalStyles = createGlobalStyle`
         @media screen and (max-width: 1024px) {
             display: none;
         }
-    }
+    } */
 
-    .left {
+    /* .left {
         position: relative;
         float: left;    
         align-self: flex-start;
         width: fit-content;
-    }
+    } */
 
-    .clearFloat {
+    /* .clearFloat {
         clear: right;
-        /* border: 1px solid red; */
-    }
+    } */
 
-    .goalText {
+    /* .goalText {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -413,16 +405,16 @@ export const GlobalStyles = createGlobalStyle`
         @media screen and (max-width: 768px) {
             display: none;
         }
-    }
+    } */
 
-    .hideMobile {
+    /* .hideMobile {
         
         @media screen and (max-width: 768px) {
             display: none;
         }
-    }
+    } */
 
-    .moreButton {
+    /* .moreButton {
         display: none;
 
         @media screen and (max-width: 768px) {
@@ -443,16 +435,15 @@ export const GlobalStyles = createGlobalStyle`
             color: #D96921;
             margin: 17px 0;
         }
-    }
+    } */
 
     .promotionalCard {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: #F9F9F9;
+        background: #D97F2D;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        height: 140px;
-        max-width: 1144px;
+        min-height: 321px;
         width: 100%;
         margin: 18px auto 50px auto;
         padding: 0 7%;
@@ -462,13 +453,16 @@ export const GlobalStyles = createGlobalStyle`
         }
 
         span {
+            font-family: Muli;
+            font-style: normal;
             font-weight: bold;
-            font-size: 30px;
+            font-size: 31px;
             line-height: 39px;
-            color: "#282828";
-            display: block;
-            max-width: 550px;
-            margin-right: 50px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            max-width: 577px;
+
 
             @media screen and (max-width: 920px) {
                 font-size: 28px;
@@ -491,8 +485,8 @@ export const GlobalStyles = createGlobalStyle`
 
         a {
             text-decoration: none;
-            color: #FFF;
-            background: #FF6500;
+            background-color: #FFF;
+            color: #FF6500;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
             border-radius: 5px;
             display: flex;
