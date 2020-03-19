@@ -133,6 +133,7 @@ export const GlobalStyles = createGlobalStyle`
             }
     
             .control-dots {
+                z-index: 2;
     
                 .dot {
                     background-color: #fff;

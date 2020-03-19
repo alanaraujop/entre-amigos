@@ -84,6 +84,9 @@ const Home = () =>{
 			</div>
 
 			<PromotionalCard whatsappNumber={whatsappNumber}/>
+			<PromotionalCard whatsappNumber={whatsappNumber}/>
+			<PromotionalCard whatsappNumber={whatsappNumber}/>
+			<PromotionalCard whatsappNumber={whatsappNumber}/>
 		</>
 	);
 }

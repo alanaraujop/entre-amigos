@@ -51,39 +51,46 @@ export const Nav = styled.nav`
   align-items: center;
   height: 100%;
 
-  a {
+  .link-container {
+    position: relative;
     display: flex;
     height: 100%;
     align-items: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.9);
-    padding: 0 10px;
-    margin: 0 12px;
-    font-size: 20px;
-    line-height: 25px;
-    font-family: Abel;
-    position: relative;
 
-    &:last-of-type {
-      margin-right: 0;
-    }
-
-    &.active {
-      background-color: #0003;
-    }
-
-    /* &.active::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: #FFF;
+    .link-background {
       position: absolute;
-      top: 0;
-      left: 0;
-    } */
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    a {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 0 10px;
+      font-size: 20px;
+      line-height: 25px;
+      font-family: Abel;
+      position: relative;
+      z-index: 3;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    .homeNav + .active {
+    }
+
+    .active + .link-background {
+      background-color: #B2561B;
+    }
   }
+
 
   @media screen and (max-width: 1024px) {
     display: none;

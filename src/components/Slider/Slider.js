@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import { ShadowContainer } from './styles';
+import { ShadowContainer, CampaignContainer } from './styles';
 import carousel1 from '../../assets/images/carousel_1.png';
 import carousel1Mobile from '../../assets/images/carousel_1_mobile.png';
 import carousel2 from '../../assets/images/carousel_2.png';
@@ -74,6 +74,12 @@ const Slider = () => {
           <img src={carousel3} alt="Entre Amigos" />
         </picture>
       </Carousel>
+      <CampaignContainer>
+        <div className="textContainer">
+          <h3>Títulos de Campanhas</h3>
+          <p>Aqui texto descritivo das campanhas</p>
+        </div>
+      </CampaignContainer>
     </div>
   );
 }
