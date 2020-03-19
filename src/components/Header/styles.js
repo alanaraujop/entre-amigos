@@ -56,6 +56,8 @@ export const Nav = styled.nav`
     display: flex;
     height: 100%;
     align-items: center;
+    justify-content: center;
+    margin: 0 10px;
 
     .link-background {
       position: absolute;
@@ -81,9 +83,6 @@ export const Nav = styled.nav`
       &:last-of-type {
         margin-right: 0;
       }
-    }
-
-    .homeNav + .active {
     }
 
     .active + .link-background {
