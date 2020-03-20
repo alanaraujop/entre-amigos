@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle` 
     @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Muli:400,600&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     html,
-    body,
+    body, 
     #root {
         min-height: 100%;
         width: 100%;

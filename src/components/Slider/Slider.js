@@ -18,10 +18,9 @@ const Slider = () => {
         showThumbs={false}
         infiniteLoop={true}
         autoPlay={true}
-        interval={3000}
-        transitionTime={500}
+        interval={7500}
+        transitionTime={750}
         stopOnHover={false}
-        swipeable={true}
         emulateTouch={true}
         centerMode={true}
         centerSlidePercentage={100}
