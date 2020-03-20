@@ -24,7 +24,10 @@ export const CampaignContainer = styled.div`
   justify-content: flex-end;
 
   .textContainer {
-    margin: auto auto 40px 30px;
+    margin: auto auto 60px 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
 
     h3, p {
       color: #FFF;
@@ -32,6 +35,7 @@ export const CampaignContainer = styled.div`
       font-style: normal;
       font-weight: bold;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      text-align: left;
     }
 
     h3 {
@@ -42,6 +46,37 @@ export const CampaignContainer = styled.div`
     p {
       font-size: 16px;
       line-height: 20px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 25px;
+      margin-right: 25px;
+
+      h3 {
+        font-size: 25px;
+        line-height: 31px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      margin-right: 25px;
+      margin-bottom: 15px;
+      margin-left: 16px;
+
+      h3 {
+        font-size: 25px;
+        line-height: 31px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 

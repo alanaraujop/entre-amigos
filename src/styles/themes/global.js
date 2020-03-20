@@ -87,49 +87,47 @@ export const GlobalStyles = createGlobalStyle`
     .carouselContainer {
         margin-bottom: 35px;
         position: relative;
-
-        .logoContainer {
-            background: linear-gradient(178.31deg, #000000 3.33%, rgba(0, 0, 0, 0) 77.63%);
-            width: 100%;
-            min-height: 120px;
-            height: 20vw;
-            max-height: 222px;
-            position: absolute;
-            top: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 0 50px;
-            z-index: 2;
-
-            .logo {
-                width: 100%;
-                max-width: 545px;
-                height: 65%;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-                margin-top: 20px;
-
-                @media screen and (max-width: 768px) {
-                    margin-top: 10px;
-                }
-            }
-        }
+        overflow: hidden;
 
         .carousel {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            min-height: 240px;
+            min-height: 400px;
             max-height: 768px;
             background-color: #fff;
+            overflow: hidden;
+
+            .slide {
+                background-color: #D97F2D;
+            }
     
             .slider-wrapper {
-                min-height: 240px;
+                min-height: 400px;
                 background-color: #fff;
-    
-                img {
-                    min-height: 240px;
+                max-height: 768px;
+                position: relative;
+
+                .carouselItem {
+                    max-height: 768px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    picture {
+                        width: 100%;
+                        height: 100%;
+                        min-height: 400px;
+
+                        img {
+                            height: 100%;
+                            min-height: 400px;
+                        }
+                    }
                 }
+            
             }
     
             .control-dots {
@@ -142,6 +140,8 @@ export const GlobalStyles = createGlobalStyle`
                     width: 10px;
                     height: 10px;
                     outline: none;
+                    width: 16px;
+                    height: 16px;
     
                     &.selected {
                         background-color: #D97F2D;
@@ -157,6 +157,26 @@ export const GlobalStyles = createGlobalStyle`
 
         @media screen and (max-width: 520px) {
             margin-bottom: 10px;
+
+            .carousel {
+                min-height: 296px;
+
+                .slider-wrapper {
+                    min-height: 296px;
+
+                    .carouselItem {
+                        min-height: 296px;
+
+                        picture {
+                            min-height: 296px;
+
+                        img {
+                            min-height: 296px;
+                        }
+                    }
+                    }
+                }
+            }
         }
     }
 
