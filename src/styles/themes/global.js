@@ -155,6 +155,10 @@ export const GlobalStyles = createGlobalStyle`
             }
         }
 
+        @media screen and (max-width: 1024px) {
+            margin-top: 56px;
+        }
+
         @media screen and (max-width: 520px) {
             margin-bottom: 10px;
 

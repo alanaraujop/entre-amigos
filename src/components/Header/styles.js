@@ -39,9 +39,18 @@ export const MainHeader = styled.header`
         height: 48px;
       }
     }
+
+    @media screen and (max-width: 1024px) {
+      background-color: #D96921;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+      .header-background {
+        box-shadow: none;
+      }
+    }
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 1024px) {
     padding: 0;
   }
 `;

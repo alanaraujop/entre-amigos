@@ -9,6 +9,10 @@ export const ShadowContainer = styled.div`
   top: 0;
   left: 0;
   z-index: 2;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const CampaignContainer = styled.div`
