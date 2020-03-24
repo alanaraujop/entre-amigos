@@ -4,7 +4,8 @@ import {
   Modal,
   Slider,
   TriadFlex,
-  TextPortrait
+  TextPortrait,
+  PromotionalCard
 } from '../../components';
 
 const Home = () => {
@@ -12,7 +13,9 @@ const Home = () => {
 
   const toggleModal = () => {
 		setShowModal(!showModal);
-	};
+  };
+  
+	const whatsappNumber = "5521968062489";
 
   return (
     <div id="Home">
@@ -25,6 +28,8 @@ const Home = () => {
       </div>
 
       <TextPortrait />
+
+      <PromotionalCard whatsappNumber={whatsappNumber}/>
     </div>
   );
 };

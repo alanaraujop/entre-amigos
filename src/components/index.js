@@ -17,6 +17,7 @@ import Wave from './Vectors/Wave';
 import CloseIcon from './Vectors/CloseIcon';
 import TriadFlex from './TriadFlex';
 import TextPortrait from './TextPortrait';
+import PromotionalCard from './PromotionalCard';
 
 export {
   FacebookPixel,
@@ -37,5 +38,6 @@ export {
   Wave,
   CloseIcon,
   TriadFlex,
-  TextPortrait
+  TextPortrait,
+  PromotionalCard
 };

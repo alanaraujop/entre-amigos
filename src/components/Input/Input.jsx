@@ -14,13 +14,13 @@ const Input = props => {
       },
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
-          borderColor: '#D96921',
+          borderColor: '#FFA95C',
         },
         '&:hover fieldset': {
-          borderColor: '#D96921',
+          borderColor: '#FFA95C',
         },
         '&.Mui-focused fieldset': {
-          borderColor: '#D96921',
+          borderColor: '#FFA95C',
         },
       },
     }
