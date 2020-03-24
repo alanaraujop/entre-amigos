@@ -1,22 +1,24 @@
-import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Analytics } from "./components";
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { 
+  FacebookPixel, 
+  GoogleAnalytics,
+  Header,
+  Footer,
+} from './components';
 import {
-  /* PLOP_ROUTE_IMPORT */
   Home,
   Menu,
   Contact,
   Gallery,
   Events
-} from "./containers";
-import FacebookPixel from "./components/FacebookPixel";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+} from "./views";
 
 export default function Routes() {
+
   return (
     <BrowserRouter basename={process.env.REACT_APP_PUBLIC_URL}>
-      <Analytics />
+      <GoogleAnalytics />
       <FacebookPixel />
       <Header />
       <Switch>
