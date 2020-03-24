@@ -1,5 +1,4 @@
 import React from 'react';
-import { CloseButton } from '..';
 import { CloseIcon } from '..';
 import './Modal.scss';
 
