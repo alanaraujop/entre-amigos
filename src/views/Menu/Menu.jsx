@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Menu.scss';
 import Image1 from '../../assets/images/menu/foto-entradas.png';
 import Image2 from '../../assets/images/menu/foto-pratos-principais.png';
@@ -8,6 +8,10 @@ import { MenuPortrait, MenuList } from '../../components';
 import { entryMenu, mainMenu, dessertsMenu } from './MenuLists';
 
 const Menu = () => {
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
 
   return (
     <div id="Menu">
@@ -67,24 +71,24 @@ const Menu = () => {
           </div>
 
         </div>
+      </div>
 
-        <div className="desserts-menu">
-          <MenuPortrait 
-            photo={Image3}
-            alt="Doces"
-            title="Doces"
-            width={'50vw'}
-            height={'425px'}
-            maxWidth={'620px'}
-            minWidth={'550px'}
+      <div className="desserts-menu">
+        <MenuPortrait 
+          photo={Image3}
+          alt="Doces"
+          title="Doces"
+          width={'50vw'}
+          height={'425px'}
+          maxWidth={'620px'}
+          minWidth={'550px'}
+        />
+
+        <div className="desserts-menu-list-container">
+          <MenuList 
+            list={dessertsMenu.slice(0,7)}
+            hasDescription={true}
           />
-
-          <div className="desserts-menu-list-container">
-            <MenuList 
-              list={dessertsMenu.slice(0,7)}
-              hasDescription={true}
-            />
-          </div>
         </div>
       </div>
 

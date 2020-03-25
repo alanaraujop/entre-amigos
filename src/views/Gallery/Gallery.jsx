@@ -1,4 +1,4 @@
-import React, { useState, useCallback }  from 'react';
+import React, { useState, useCallback, useEffect }  from 'react';
 import './Gallery.scss';
 import gallery1 from '../../assets/images/gallery/gallery1.png';
 import gallery2 from '../../assets/images/gallery/gallery2.png';
@@ -12,10 +12,13 @@ import gallery9 from '../../assets/images/gallery/gallery9.png';
 import { PhotoGrid } from '../../components';
 import Carousel, { Modal, ModalGateway } from "react-images";
 
-
 const Gallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
 
   const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index);

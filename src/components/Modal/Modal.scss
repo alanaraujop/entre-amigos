@@ -111,4 +111,29 @@
       padding: 0 8px;
     }
   }
+
+  .small {
+    max-width: 90%;
+    min-width: 90%;
+    max-height: fit-content;
+    min-height: fit-content;
+    padding: 0 20px 48px 20px;
+    border-radius: 4px;
+
+    .modal-header {
+
+      h2 {
+        display: none;
+      }
+
+      .close-icon {
+        margin-left: auto;
+        left: 10px;
+      }
+    }
+
+    .text-container {
+      text-align: center;
+    }
+  }
 }

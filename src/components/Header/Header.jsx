@@ -29,7 +29,7 @@ const Header = () => {
   const opacityEffect = () => {
     const currentScrollPos = window.pageYOffset;
     const parentContainer = document.querySelector(".carouselContainer");
-    const parentHeight = parentContainer.offsetHeight;
+    const parentHeight = !!parentContainer && parentContainer.offsetHeight;
     const headerBackground = document.querySelector(".header-background");
     const activeBackground = document.querySelector(".link-background");
 
