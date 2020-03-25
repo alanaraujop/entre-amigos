@@ -2,23 +2,44 @@ import React, { useState, useEffect } from 'react';
 import './Home.scss';
 import { 
   Modal,
-  Slider,
+  BannerSlider,
   TriadFlex,
   TextPortrait,
-  PromotionalCard
+  PromotionalCard,
+  NewsCarousel,
 } from '../../components';
 import { whatsappNumber } from '../../info';
+import NewsImage1 from '../../assets/images/news/news1.png';
+import NewsImage2 from '../../assets/images/news/news2.png';
+import NewsImage3 from '../../assets/images/news/news3.png';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
 
+
   useEffect(() => {
     window.scrollTo(0,0);
+    // eslint-disable-next-line
   }, []);
 
   const toggleModal = () => {
 		setShowModal(!showModal);
   };
+
+  const news = [
+    {
+      photo: NewsImage1,
+      href: 'https://oglobo.globo.com/ela/gastronomia/equipe-que-comandou-restaurante-antiquarius-no-leblon-por-decadas-abre-boteco-em-botafogo-23722865'
+    },
+    {
+      photo: NewsImage2,
+      href: 'https://vejario.abril.com.br/comer-e-beber/classicos-do-antiquarius-e-do-bar-luiz-em-novos-enderecos/'
+    },
+    {
+      photo: NewsImage3,
+      href: 'https://blogs.oglobo.globo.com/luciana-froes/post/menu-do-antiquarius-em-botafogo.html'
+    }
+  ];
     
   const modalContent = () => {
 
@@ -64,7 +85,7 @@ const Home = () => {
 
   return (
     <div id="Home">
-      <Slider />
+      <BannerSlider />
 
       {showModal && 
         <Modal 
@@ -78,6 +99,14 @@ const Home = () => {
       </div>
 
       <TextPortrait />
+
+      <div className="container">
+        <h2>Entre amigos na mídia</h2>
+      </div>
+
+      <div className="news-container">
+        <NewsCarousel news={news} />
+      </div>
 
       <PromotionalCard whatsappNumber={whatsappNumber}/>
     </div>

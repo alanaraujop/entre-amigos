@@ -70,14 +70,14 @@ const Menu = () => {
 
             <div className="left">
               <MenuList 
-                list={mainMenu.slice(0,7)}
+                list={mainMenu.slice(0, mainMenu.length / 2)}
                 hasDescription={true}
               />
             </div>
 
             <div className="right">
               <MenuList 
-                list={mainMenu.slice(7)}
+                list={mainMenu.slice(mainMenu.length / 2)}
                 hasDescription={true}
               />
             </div>

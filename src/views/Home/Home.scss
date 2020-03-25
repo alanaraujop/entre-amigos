@@ -1,1 +1,16 @@
 @import '../../styles/Base.scss';
+
+#Home {
+
+  .news-container {
+    position: relative;
+    top: 165px;
+    // max-width: 1144px;
+    width: 100%;
+    margin: 0 auto;
+    // padding: 0 40px;
+    border: 1px solid red;
+    // display: flex;
+    // justify-content: center;
+  }
+}
