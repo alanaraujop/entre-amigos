@@ -7,6 +7,7 @@ import {
   TextPortrait,
   PromotionalCard
 } from '../../components';
+import { whatsappNumber } from '../../info';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -18,9 +19,7 @@ const Home = () => {
   const toggleModal = () => {
 		setShowModal(!showModal);
   };
-  
-  const whatsappNumber = "5521968062489";
-  
+    
   const modalContent = () => {
 
     return (
