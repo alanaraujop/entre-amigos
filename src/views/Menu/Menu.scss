@@ -2,5 +2,121 @@
 
 
 #Menu {
-  
+  padding: 0 16px 50px 16px;
+
+  .title-page {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Homemade Apple;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 86px;
+    text-align: center;
+    color: #FF6500;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+    padding-top: 56px;
+  }
+
+  .entry-menu {
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+
+    &-list-container {
+      margin: 25px 35px 25px 45px;
+    }
+
+    .ask-delivery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 90px;
+      margin-left: 20px;
+
+      img {
+        width: 117px;
+        height: 147px;
+      }
+
+      &-button {
+        text-decoration: none;
+        color: #FFF;
+        background-color: #D96921;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 60px;
+        transition: 150ms ease-in-out;
+        font-family: Abel;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.9);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    &-lists-container {
+      display: flex;
+      margin: 35px;
+
+      .left, 
+      .right {
+        padding: 0 100px;
+      }
+
+      .left {
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 75%;
+          background-color: #FFA95C;
+          position: absolute;
+          right: 5px;
+          bottom: 15%;
+        }
+      }
+    }
+  }
+
+  .desserts-menu {
+    display: flex;
+    width: 100%;
+    margin-bottom: 35px;
+
+    &-list-container {
+      margin: 25px 35px 25px 45px;
+
+      .menu-list {
+
+        &-item {
+          
+          .item-name {
+            max-width: 700px;
+          }
+        }
+      }
+    }
+  }
 }

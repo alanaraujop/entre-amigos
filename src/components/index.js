@@ -18,6 +18,8 @@ import CloseIcon from './Vectors/CloseIcon';
 import TriadFlex from './TriadFlex';
 import TextPortrait from './TextPortrait';
 import PromotionalCard from './PromotionalCard';
+import MenuPortrait from './MenuPortrait';
+import MenuList from './MenuList';
 
 export {
   FacebookPixel,
@@ -39,5 +41,7 @@ export {
   CloseIcon,
   TriadFlex,
   TextPortrait,
-  PromotionalCard
+  PromotionalCard,
+  MenuPortrait,
+  MenuList
 };
