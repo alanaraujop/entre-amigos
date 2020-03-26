@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './NewsCarousel.scss';
 import Carousel from "nuka-carousel";
+import { useLocation } from 'react-router-dom';
 
 const NewsCarousel = props => {
   const { news } = props;
   const [viewportWidth, setViewportWidth] = useState(0);
-
-  const isClient = typeof window !== 'undefined';
+  const location = useLocation();
+  const pathname = location.pathname;
 
   const updateWindowDimensions = () => {
     setViewportWidth(window.innerWidth);
@@ -14,7 +15,7 @@ const NewsCarousel = props => {
 
   useEffect(() => {
 
-    if (isClient) {
+    if (pathname === '/') {
       window.addEventListener('resize', updateWindowDimensions);
       setTimeout(() => {
         updateWindowDimensions();
@@ -22,32 +23,40 @@ const NewsCarousel = props => {
     }
 
     return () => {
-      if (isClient) window.removeEventListener('resize', this.updateWindowDimensions);
+      window.removeEventListener('resize', updateWindowDimensions);
     }
-  }, [])
+
+    // eslint-disable-next-line
+  }, []);
 
   useEffect(() => {
     console.log(viewportWidth)
   }, [viewportWidth]);
 
   const handleShow = () => {
-    if (viewportWidth <= 400) {
-      return 1.35
-    }
-    else if (viewportWidth <= 450) {
-      return 1.45
-    }
-    else if (viewportWidth <= 500) {
-      return 1.65
-    }
-    else if (viewportWidth <= 540) {
+    if (viewportWidth <= 360) {
       return 1.85
     }
-    else if (viewportWidth <= 600) {
+    else if (viewportWidth <= 380) {
       return 1.95
     }
-    else if (viewportWidth <= 630) {
-      return 2.1
+    else if (viewportWidth <= 400) {
+      return 2.15
+    }
+    else if (viewportWidth <= 450) {
+      return 2.25
+    }
+    else if (viewportWidth <= 500) {
+      return 2.35
+    }
+    else if (viewportWidth <= 540) {
+      return 2.55
+    }
+    else if (viewportWidth <= 600) {
+      return 2.95
+    }
+    else if (viewportWidth <= 640) {
+      return 3.1
     }
     else if (viewportWidth <= 680) {
       return 2.25
@@ -77,14 +86,14 @@ const NewsCarousel = props => {
       return 5.1
     }
     else {
-      return 6.5
+      return 5.5
     }
   };
 
   return (
     <div className="news-carousel-container">
       <Carousel
-        cellSpacing={12}
+        cellSpacing={viewportWidth > 640 ? 24 : 6}
         transitionMode="scroll"
         slidesToShow={handleShow()}
         slidesToScroll="auto"
@@ -92,6 +101,7 @@ const NewsCarousel = props => {
         scrollMode="remainder"
         disableEdgeSwiping={true}
         swiping={true}
+        // cellAlign="center"
       >   
         {!!news && news.map((item, index) => {
           return (

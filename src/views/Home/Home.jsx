@@ -100,15 +100,15 @@ const Home = () => {
 
       <TextPortrait />
 
-      <div className="container">
-        <h2>Entre amigos na mídia</h2>
-      </div>
-
       <div className="news-container">
-        <NewsCarousel news={news} />
-      </div>
+        <div className="container">
+          <h2>Entre Amigos na mídia</h2>
+        </div>
 
-      <PromotionalCard whatsappNumber={whatsappNumber}/>
+        <NewsCarousel news={news} />
+
+        <PromotionalCard whatsappNumber={whatsappNumber}/>
+      </div>
     </div>
   );
 };
