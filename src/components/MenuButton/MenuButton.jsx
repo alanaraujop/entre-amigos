@@ -1,10 +1,11 @@
 import React from 'react';
 import './MenuButton.scss';
 
-const MenuButton = () => {
-  
+const MenuButton = props => {
+  const { toggleMenuMobile } = props;
+
   return (
-    <div className="menu-button">
+    <div className="menu-button" onClick={toggleMenuMobile}>
       <svg 
         width="18" 
         height="12" 

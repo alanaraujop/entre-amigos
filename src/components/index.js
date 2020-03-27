@@ -21,6 +21,7 @@ import PromotionalCard from './PromotionalCard';
 import MenuPortrait from './MenuPortrait';
 import MenuList from './MenuList';
 import NewsCarousel from './NewsCarousel';
+import MenuMobile from './MenuMobile';
 
 export {
   FacebookPixel,
@@ -45,5 +46,6 @@ export {
   PromotionalCard,
   MenuPortrait,
   MenuList,
-  NewsCarousel
+  NewsCarousel,
+  MenuMobile
 };
