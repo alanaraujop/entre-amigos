@@ -30,18 +30,21 @@ const NewsCarousel = props => {
   }, []);
 
   useEffect(() => {
-    console.log(viewportWidth)
+    // console.log(viewportWidth)
   }, [viewportWidth]);
 
   const handleShow = () => {
-    if (viewportWidth <= 360) {
+    if (viewportWidth <= 340) {
+      return 1.65
+    }
+    else if (viewportWidth <= 360) {
       return 1.85
     }
     else if (viewportWidth <= 380) {
       return 1.95
     }
     else if (viewportWidth <= 400) {
-      return 2.15
+      return 2.05
     }
     else if (viewportWidth <= 450) {
       return 2.25
@@ -53,16 +56,16 @@ const NewsCarousel = props => {
       return 2.55
     }
     else if (viewportWidth <= 600) {
-      return 2.95
+      return 2.75
     }
     else if (viewportWidth <= 640) {
       return 3.1
     }
     else if (viewportWidth <= 680) {
-      return 2.25
+      return 2.1
     }
     else if (viewportWidth <= 768) {
-      return 2.55
+      return 2.35
     }
     else if (viewportWidth <= 820) {
       return 2.75
