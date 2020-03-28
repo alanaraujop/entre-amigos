@@ -3,6 +3,7 @@ import './Events.scss';
 import { Circle } from '../../components';
 import Background from '../../assets/images/events_parallax.png';
 import { Modal } from '../../components';
+import { whatsappNumber } from '../../info';
 
 const Events = () => {
   const [showModal, setShowModal] = useState(false);
@@ -100,7 +101,14 @@ const Events = () => {
             Faça do seu evento com o Entre Amigos Gastronomia um banquete único, repleto de sentimentos, sabores e grandes lembranças da história de uma casa conhecida  mundialmente.
           </p>
 
-          <div className="reservationButton">Reserve agora</div>
+          <a
+            className="reservationButton"
+            href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=Olá! Eu gostaria de fazer uma reserva!`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Reserva agora
+          </a>
         </div>
 
       </div>

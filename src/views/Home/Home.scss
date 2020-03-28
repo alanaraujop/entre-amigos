@@ -1,7 +1,8 @@
 @import '../../styles/Base.scss';
 
 #Home {
-
+  background-color: $baseColor;
+  
   .news-container {
     width: 100%;
     margin: 0 auto;

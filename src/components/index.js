@@ -22,6 +22,7 @@ import MenuPortrait from './MenuPortrait';
 import MenuList from './MenuList';
 import NewsCarousel from './NewsCarousel';
 import MenuMobile from './MenuMobile';
+import MenuToggler from './MenuToggler';
 
 export {
   FacebookPixel,
@@ -47,5 +48,6 @@ export {
   MenuPortrait,
   MenuList,
   NewsCarousel,
-  MenuMobile
+  MenuMobile,
+  MenuToggler
 };

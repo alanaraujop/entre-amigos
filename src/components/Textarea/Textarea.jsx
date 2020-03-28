@@ -6,7 +6,7 @@ const Textarea = props => {
 
   const useStyles = makeStyles({
     main: {
-      backgroundColor: '#FDFDFD',
+      backgroundColor: '#F9F9F9',
       margin: '8px 0',
       '& label.Mui-focused': {
         color: '#D96921',
