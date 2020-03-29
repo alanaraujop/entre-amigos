@@ -16,7 +16,7 @@
     font-size: 11px;
     line-height: 13px;
     height: 13px;
-    margin-top: -8px;
+    margin-top: -6px;
   }
 
   p {
@@ -25,6 +25,9 @@
   }
 
   .send-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     width: 128px;
     height: 36px;
@@ -35,6 +38,8 @@
     align-self: flex-end;
     cursor: pointer;
     margin-top: 15px;
+    font-size: 14px;
+    text-decoration: none;
 
     &.disabled {
       opacity: 0.5;

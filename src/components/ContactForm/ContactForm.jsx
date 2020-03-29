@@ -5,6 +5,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import { Input, SelectInput, Textarea } from "..";
 import * as Yup from "yup";
 import { Formik } from "formik";
+import { whatsappNumber } from "../../info";
 
 const formSchemaValues = {
   name: "",
@@ -32,22 +33,25 @@ const formValidationSchema = Yup.object().shape({
     .required("O campo mensagem é obrigatório")
 });
 
-const ContactForm = () => {
+const ContactForm = (props) => {
+
   const theme = createMuiTheme({
     typography: {
       fontFamily: "'Muli', sans-serif"
     }
   });
 
-  const handleLogin = _form => {
-    console.log("SUBMIT :: ", _form);
+  const handleSend = values => {
+    console.log("SUBMIT :: ", values);
+    // const message;
+    // window.location.href = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
   };
 
   return (
     <ThemeProvider theme={theme}>
       <Formik
         initialValues={formSchemaValues}
-        onSubmit={values => handleLogin(values)}
+        onSubmit={values => handleSend(values)}
         validationSchema={formValidationSchema}
       >
         {({ handleSubmit, dirty, isValid }) => (
@@ -78,6 +82,15 @@ const ContactForm = () => {
             >
               Enviar
             </button>
+
+            {/* <a
+              className={`send-button ${!dirty || !isValid ? "disabled" : ""}`}
+              href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Enviar
+            </a> */}
           </div>
         )}
       </Formik>
