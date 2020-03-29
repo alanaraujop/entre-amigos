@@ -33,7 +33,7 @@ const formValidationSchema = Yup.object().shape({
     .required("O campo mensagem é obrigatório")
 });
 
-const ContactForm = (props) => {
+const ContactForm = () => {
 
   const theme = createMuiTheme({
     typography: {
@@ -42,9 +42,8 @@ const ContactForm = (props) => {
   });
 
   const handleSend = values => {
-    console.log("SUBMIT :: ", values);
-    // const message;
-    // window.location.href = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
+    const message = `Nome: ${values.name}%0aE-mail: ${values.email}%0aWhatsApp: ${values.phone}%0aAssunto: ${values.subject}%0aMensagem: ${values.message}`;
+    window.location.href = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
   };
 
   return (

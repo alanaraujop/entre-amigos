@@ -24,6 +24,19 @@ body {
   font-family: Muli, sans-serif;
 }
 
+#root {
+  animation: fadeIn 300ms ease-in;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
