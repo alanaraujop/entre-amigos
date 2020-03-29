@@ -1,16 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import './Header.scss';
 import LogoHeader from '../../assets/images/logo_header.png';
 import MenuButton from '../MenuButton';
+import MenuMobile from '../MenuMobile';
 
 const Header = () => {
+  const [renderMenuMobile, setRenderMenuMobile] = useState(false);
   const location = useLocation();
   const pathname = location.pathname;
   const opacityValue = pathname === '/' ? 0 : 1;
 
   useEffect(() => {
+
+    setRenderMenuMobile(false);
+
     if (pathname === '/') {
       window.addEventListener('scroll', opacityEffect);
       let activeBackground = document.querySelector(".link-background");
@@ -29,7 +34,7 @@ const Header = () => {
   const opacityEffect = () => {
     const currentScrollPos = window.pageYOffset;
     const parentContainer = document.querySelector(".carouselContainer");
-    const parentHeight = parentContainer.offsetHeight;
+    const parentHeight = !!parentContainer && parentContainer.offsetHeight;
     const headerBackground = document.querySelector(".header-background");
     const activeBackground = document.querySelector(".link-background");
 
@@ -65,7 +70,7 @@ const Header = () => {
           <img src={LogoHeader} alt="Logo do Entre Amigos Gastronomia" />
         </Link>
 
-        <nav>
+        <nav className="menu-navigation">
 
           <div className="link-container">
             <NavLink to="/" exact activeClassName="active">Home</NavLink>
@@ -90,7 +95,11 @@ const Header = () => {
       
         </nav>
 
-        <MenuButton />
+        <MenuMobile show={renderMenuMobile} />
+
+        <MenuButton
+          toggleMenuMobile={() => setRenderMenuMobile(!renderMenuMobile)}
+        />
       </div>
     </div>
   );

@@ -1,68 +1,62 @@
-import React from 'react';
-import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
-import InputMask from 'react-input-mask';
+import React from "react";
+import TextField from "@material-ui/core/TextField";
+import { makeStyles } from "@material-ui/core/styles";
+import { masks } from "../../utils/masks";
+import { useFormikContext } from "formik";
 
 const Input = props => {
+  const { mask, name, label } = props;
+  const {
+    values,
+    errors,
+    touched,
+    setFieldValue,
+    handleBlur
+  } = useFormikContext();
+
+  const handleChange = event => {
+    const maskedValue = masks[mask || "standard"](event.target.value);
+    console.log(maskedValue);
+    setFieldValue(name, maskedValue);
+  };
 
   const useStyles = makeStyles({
     main: {
-      backgroundColor: '#FDFDFD',
-      margin: '8px 0',
-      '& label.Mui-focused': {
-        color: '#D96921',
+      backgroundColor: "#F9F9F9",
+      margin: "8px 0",
+      "& label.Mui-focused": {
+        color: "#D96921"
       },
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-          borderColor: '#FFA95C',
+      "& .MuiOutlinedInput-root": {
+        "& fieldset": {
+          borderColor: "#FFA95C"
         },
-        '&:hover fieldset': {
-          borderColor: '#FFA95C',
+        "&:hover fieldset": {
+          borderColor: "#FFA95C"
         },
-        '&.Mui-focused fieldset': {
-          borderColor: '#FFA95C',
-        },
-      },
+        "&.Mui-focused fieldset": {
+          borderColor: "#FFA95C"
+        }
+      }
     }
   });
 
   const classes = useStyles();
 
-  const phoneMasked = () => {
-
-    return (
-      <InputMask
-        mask="(99) 99999-9999"
-        // value={}
-        // onChange={}
-      >
-        {() => (
-            <TextField 
-              className={classes.main} 
-              id="outlined-basic" 
-              label={props.label} 
-              variant="outlined"
-              size="small"
-              inputComponent={props.inputComponent}
-            />
-          )}
-      </InputMask>
-    )
-  }
-
-  if (props.phone) {
-    return phoneMasked();
-  }
-
   return (
-    <TextField 
-      className={classes.main} 
-      id="outlined-basic" 
-      label={props.label} 
-      variant="outlined"
-      size="small"
-      inputComponent={props.inputComponent}
-    />
+    <>
+      <TextField
+        error={touched[name] && errors[name]}
+        value={values[name]}
+        onChange={handleChange}
+        onBlur={handleBlur(name)}
+        className={classes.main}
+        label={label}
+        variant="outlined"
+        size="small"
+      />
+      <span className="error-message">{touched[name] && errors[name]}</span>
+    </>
   );
 };
 

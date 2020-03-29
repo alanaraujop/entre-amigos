@@ -4,7 +4,7 @@ import MenuButton from './MenuButton';
 import Header from './Header';
 import Footer from './Footer';
 import Modal from './Modal';
-import Slider from './Slider';
+import BannerSlider from './BannerSlider';
 import CloseButton from './CloseButton';
 import MapLocation from './MapLocation';
 import ContactForm from './ContactForm';
@@ -18,6 +18,11 @@ import CloseIcon from './Vectors/CloseIcon';
 import TriadFlex from './TriadFlex';
 import TextPortrait from './TextPortrait';
 import PromotionalCard from './PromotionalCard';
+import MenuPortrait from './MenuPortrait';
+import MenuList from './MenuList';
+import NewsCarousel from './NewsCarousel';
+import MenuMobile from './MenuMobile';
+import MenuToggler from './MenuToggler';
 
 export {
   FacebookPixel,
@@ -26,7 +31,7 @@ export {
   Header,
   Footer,
   Modal,
-  Slider,
+  BannerSlider,
   CloseButton,
   MapLocation,
   ContactForm,
@@ -39,5 +44,10 @@ export {
   CloseIcon,
   TriadFlex,
   TextPortrait,
-  PromotionalCard
+  PromotionalCard,
+  MenuPortrait,
+  MenuList,
+  NewsCarousel,
+  MenuMobile,
+  MenuToggler
 };

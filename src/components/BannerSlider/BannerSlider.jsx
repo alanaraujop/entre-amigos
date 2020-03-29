@@ -1,15 +1,13 @@
 import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import './BannerSlider.scss';
 import { Carousel } from 'react-responsive-carousel';
-import './Slider.scss';
-// import carousel1 from '../../assets/images/carousel_1.png';
-import carousel1Mobile from '../../assets/images/carousel_1_mobile.png';
-// import carousel2 from '../../assets/images/carousel_2.png';
-import carousel2Mobile from '../../assets/images/carousel_2_mobile.png';
 import carousel1 from '../../assets/images/p6.jpg';
 import carousel2 from '../../assets/images/p4.jpg';
+import carousel1Mobile from '../../assets/images/carousel_1_mobile.png';
+import carousel2Mobile from '../../assets/images/carousel_2_mobile.png';
 
-const Slider = () => {
+const BannerSlider = () => {
 
   return (
     <div className="carouselContainer">
@@ -65,4 +63,4 @@ const Slider = () => {
   );
 }
 
-export default Slider;
+export default BannerSlider;

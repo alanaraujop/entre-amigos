@@ -1,4 +1,4 @@
-@import '../../styles/Base.scss';
+@import "../../styles/Base.scss";
 
 .contact-form {
   display: flex;
@@ -8,22 +8,43 @@
   margin-left: auto;
   margin-right: 0;
 
+  .error-message {
+    display: block;
+    color: $errorColor;
+    width: 100%;
+    text-align: right;
+    font-size: 11px;
+    line-height: 13px;
+    height: 13px;
+    margin-top: -6px;
+  }
+
   p {
     margin: 0 48px 20px 48px;
     text-align: center;
   }
 
   .send-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     width: 128px;
     height: 36px;
-    background-color: #D96921;
+    background-color: #d96921;
     border-radius: 5px;
-    color: #FFF;
+    color: #fff;
     text-transform: uppercase;
     align-self: flex-end;
     cursor: pointer;
-    
+    margin-top: 15px;
+    font-size: 14px;
+    text-decoration: none;
+
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
   }
 
   @media screen and (max-width: 1024px) {
@@ -32,7 +53,6 @@
   }
 
   @media screen and (max-width: 768px) {
-
     p {
       font-family: Muli;
       font-size: 16px;
