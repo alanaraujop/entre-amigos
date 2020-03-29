@@ -43,7 +43,8 @@ const ContactForm = () => {
 
   const handleSend = values => {
     const message = `Nome: ${values.name}%0aE-mail: ${values.email}%0aWhatsApp: ${values.phone}%0aAssunto: ${values.subject}%0aMensagem: ${values.message}`;
-    window.location.href = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
+    window.open(`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`, '_blank');
+    window.location.reload();
   };
 
   return (
@@ -77,7 +78,7 @@ const ContactForm = () => {
               className={`send-button ${!dirty || !isValid ? "disabled" : ""}`}
               type="submit"
               onClick={dirty && isValid ? handleSubmit : undefined}
-              disable={!dirty || !isValid}
+              // disabled={!dirty || !isValid}
             >
               Enviar
             </button>

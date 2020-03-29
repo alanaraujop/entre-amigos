@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './TriadFlex.scss';
 import Wave from '../Vectors/Wave';
+import { Redirect } from 'react-router-dom';
 
-const TriadFlex = props => {
-  const { event } = props;
+const TriadFlex = () => {
+  const [redirect, setRedirect] = useState(false);
 
   return (
     <div className="triad-flex">
+      {redirect && <Redirect to="/eventos" />}
 
       <div className="box">
         <span className="box-title">Nossa Missão</span>
@@ -30,7 +32,7 @@ const TriadFlex = props => {
         <p className="box-text">
           Com pratos clássicos entregues em pirex de vidro, você pode levar nossa gastronomia para sua casa através do nosso delivery, ou até mesmo para o seu evento. 
         </p>
-        <span className="link-text" onClick={event}>Saiba mais aqui.</span>
+        <span className="link-text" onClick={() => setRedirect(true)}>Saiba mais aqui.</span>
       </div>
 
     </div>

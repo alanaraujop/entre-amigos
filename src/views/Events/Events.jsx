@@ -103,11 +103,11 @@ const Events = () => {
 
           <a
             className="reservationButton"
-            href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=Olá! Eu gostaria de fazer uma reserva!`}
+            href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=Olá! Eu gostaria de fazer uma reserva para o meu evento!`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Reserva agora
+            Reserve agora
           </a>
         </div>
 
