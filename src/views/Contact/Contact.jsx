@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './Contact.scss';
 import { MapLocation, ContactForm } from '../../components';
-import { locationURL, time } from '../../info';
+import { locationURL, time, phoneNumbers } from '../../info';
 
 const Contact = () => {
 
@@ -20,7 +20,9 @@ const Contact = () => {
 
           <div className="opens container">
             <div className="date-time">
-              {time}
+              <span>{time}</span>
+              <span>{phoneNumbers[0]}</span>
+              <span>{phoneNumbers[1]}</span>
             </div>
           </div>
         </div>

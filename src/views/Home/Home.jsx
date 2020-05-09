@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './Home.scss';
 import { 
-  Modal,
   BannerSlider,
   TriadFlex,
   TextPortrait,
   PromotionalCard,
-  NewsCarousel,
+  NewsCarousel
 } from '../../components';
 import { whatsappNumber } from '../../info';
 import NewsImage1 from '../../assets/images/news/news1.png';
 import NewsImage2 from '../../assets/images/news/news2.png';
 import NewsImage3 from '../../assets/images/news/news3.png';
+import NewsImage4 from '../../assets/images/news/news4.jpg';
 
 const Home = props => {
 
@@ -32,6 +32,10 @@ const Home = props => {
     {
       photo: NewsImage3,
       href: 'https://blogs.oglobo.globo.com/luciana-froes/post/menu-do-antiquarius-em-botafogo.html'
+    },
+    {
+      photo: NewsImage4,
+      href: 'https://www.viagemegastronomia.com.br/gastronomia/delivery/5-hotspots-gastronomicos-pedir-casa-rio-de-janeiro/'
     }
   ];
   
@@ -50,7 +54,7 @@ const Home = props => {
           <h2>Entre Amigos na mídia</h2>
         </div>
 
-        <NewsCarousel news={news} />
+        <NewsCarousel news={news.reverse()} />
 
         <PromotionalCard whatsappNumber={whatsappNumber}/>
       </div>
