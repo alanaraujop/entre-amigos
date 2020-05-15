@@ -6,6 +6,8 @@ import carousel1 from '../../assets/images/p6.jpg';
 import carousel2 from '../../assets/images/p4.jpg';
 import carousel1Mobile from '../../assets/images/carousel_1_mobile.png';
 import carousel2Mobile from '../../assets/images/carousel_2_mobile.png';
+import carousel3 from '../../assets/images/corona.jpeg';
+import carousel3Mobile from '../../assets/images/corona_mobile.png';
 
 const BannerSlider = () => {
 
@@ -25,6 +27,22 @@ const BannerSlider = () => {
         centerMode={true}
         centerSlidePercentage={100}
       >
+
+      <div className="carouselItem">
+
+          <picture>
+            <source media="(min-width: 900px)" srcSet={carousel3} className="imagem" />
+            <source media="(max-width: 901px)" srcSet={carousel3Mobile} />
+            <img src={carousel2} alt="Entre Amigos" />
+          </picture>
+          <div className="campaignContainer">
+            <div className="textContainer">
+              <h3>Delivery Entre Amigos</h3>
+              <p>Duarante a pandemia nossas portas estarão fechadas, mas você pode levar o nosso sabor para sua casa.</p>
+            </div>
+          </div>
+
+          </div>
 
         <div className="carouselItem">
 
@@ -57,6 +75,8 @@ const BannerSlider = () => {
           </div>
 
         </div>
+
+        
 
       </Carousel>
     </div>
