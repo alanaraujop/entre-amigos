@@ -8,6 +8,8 @@ import carousel1Mobile from '../../assets/images/carousel_1_mobile.png';
 import carousel2Mobile from '../../assets/images/carousel_2_mobile.png';
 import carousel3 from '../../assets/images/corona.jpeg';
 import carousel3Mobile from '../../assets/images/corona_mobile.png';
+import carousel5 from '../../assets/images/carousel_5.png';
+import carousel5Mobile from '../../assets/images/carousel_5_mobile.png';
 
 const BannerSlider = () => {
 
@@ -28,7 +30,7 @@ const BannerSlider = () => {
         centerSlidePercentage={100}
       >
 
-      <div className="carouselItem">
+        <div className="carouselItem">
 
           <picture>
             <source media="(min-width: 900px)" srcSet={carousel3} className="imagem" />
@@ -42,7 +44,7 @@ const BannerSlider = () => {
             </div>
           </div>
 
-          </div>
+        </div>
 
         <div className="carouselItem">
 
@@ -76,7 +78,23 @@ const BannerSlider = () => {
 
         </div>
 
-        
+        <div className="carouselItem">
+
+          <picture>
+            <source media="(min-width: 900px)" srcSet={carousel5} className="imagem" />
+            <source media="(max-width: 901px)" srcSet={carousel5Mobile} />
+            <img src={carousel2} alt="Entre Amigos" />
+          </picture>
+          <div className="campaignContainer">
+            <div className="textContainer">
+              <h3>Entre Amigos Gastronomia</h3>
+              <p>A essência de uma casa enaltecida por muitos e conhecida mudialmente não pode deixar de existir.</p>
+            </div>
+          </div>
+
+        </div>
+
+
 
       </Carousel>
     </div>

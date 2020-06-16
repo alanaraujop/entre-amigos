@@ -1,14 +1,12 @@
-import React, { useState, useCallback, useEffect }  from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import './Gallery.scss';
-import gallery1 from '../../assets/images/gallery/gallery1.png';
-import gallery2 from '../../assets/images/gallery/gallery2.png';
-import gallery3 from '../../assets/images/gallery/gallery3.png';
-import gallery4 from '../../assets/images/gallery/gallery4.png';
-import gallery5 from '../../assets/images/gallery/gallery5.png';
-import gallery6 from '../../assets/images/gallery/gallery6.png';
-import gallery7 from '../../assets/images/gallery/gallery7.png';
-import gallery8 from '../../assets/images/gallery/gallery8.png';
-import gallery9 from '../../assets/images/gallery/gallery9.png';
+// import gallery1 from '../../assets/images/gallery/gallery1.png';
+// import gallery2 from '../../assets/images/gallery/gallery2.png';
+// import gallery5 from '../../assets/images/gallery/gallery5.png';
+// import gallery6 from '../../assets/images/gallery/gallery6.png';
+// import gallery7 from '../../assets/images/gallery/gallery7.png';
+// import gallery8 from '../../assets/images/gallery/gallery8.png';
+// import gallery9 from '../../assets/images/gallery/gallery9.png';
 import { PhotoGrid } from '../../components';
 import Carousel, { Modal, ModalGateway } from "react-images";
 
@@ -17,7 +15,7 @@ const Gallery = () => {
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }, []);
 
   const openLightbox = useCallback((event, { photo, index }) => {
@@ -33,7 +31,7 @@ const Gallery = () => {
   const CustomModalFooter = ({ currentIndex, views }) => {
     const activeView = currentIndex + 1
     const totalViews = views.length
-  
+
     if (!activeView || !totalViews) return null
     return (
       <span>
@@ -42,53 +40,49 @@ const Gallery = () => {
     );
   };
 
-  const photos = [
-    {
-      src: gallery1,
-      width: 3,
-      height: 4
-    },
-    {
-      src: gallery2,
-      width: 4,
-      height: 3
-    },
-    {
-      src: gallery3,
-      width: 3,
-      height: 2
-    },
-    {
-      src: gallery4,
-      width: 4,
-      height: 3
-    },
-    {
-      src: gallery5,
-      width: 4,
-      height: 3
-    },
-    {
-      src: gallery6,
-      width: 4,
-      height: 3
-    },
-    {
-      src: gallery7,
-      width: 4,
-      height: 2
-    },
-    {
-      src: gallery8,
-      width: 3,
-      height: 4
-    },
-    {
-      src: gallery9,
-      width: 4,
-      height: 3
-    }
-  ];
+  // const photos = [
+  //   {
+  //     src: gallery1,
+  //     width: 3,
+  //     height: 4,
+  //   },
+  //   {
+  //     src: gallery2,
+  //     width: 4,
+  //     height: 3
+  //   },
+  //   {
+  //     src: gallery5,
+  //     width: 4,
+  //     height: 3
+  //   },
+  //   {
+  //     src: gallery6,
+  //     width: 4,
+  //     height: 3
+  //   },
+  //   {
+  //     src: gallery7,
+  //     width: 4,
+  //     height: 2
+  //   },
+  //   {
+  //     src: gallery8,
+  //     width: 3,
+  //     height: 4
+  //   },
+  //   {
+  //     src: gallery9,
+  //     width: 4,
+  //     height: 3
+  //   }
+  // ];
+
+  const photos = new Array(32).fill("").map((item, index) => ({
+    src: require(`../../assets/images/gallery/gallery${index}.jpeg`),
+    width: 4,
+    height: 3
+  }))
 
   return (
     <div id="Gallery">
@@ -99,7 +93,7 @@ const Gallery = () => {
       />
       <ModalGateway>
         {viewerIsOpen ? (
-          <Modal 
+          <Modal
             onClose={closeLightbox}
             allowFullscreen={false}
             isFullscreen={false}
