@@ -1,0 +1,26 @@
+@import '../../styles/Base.scss';
+
+.close-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+
+  .line {
+      display: block;
+      width: 45px;
+      height: 1px;
+      background-color: #D96921;
+      position: absolute;
+
+      &:nth-child(1) {
+          transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+          transform: rotate(-45deg);
+      }
+  }
+}

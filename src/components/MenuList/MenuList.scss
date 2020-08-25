@@ -1,0 +1,43 @@
+@import '../../styles/Base.scss';
+
+.menu-list {
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    min-width: 288px;
+
+    .item-name {
+      font-family: Muli;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 25px;
+      color: #282828;
+      max-width: 320px;
+    }
+
+    .item-description {
+      font-family: Muli;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: #7A7A7A;
+      max-width: 320px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    
+    &-item {
+      
+      .item-name,
+      .item-description {
+        width: 100%;
+        max-width: 450px;
+      }
+    }
+  }
+}

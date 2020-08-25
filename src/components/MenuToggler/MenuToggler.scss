@@ -1,0 +1,48 @@
+@import '../../styles/Base.scss';
+
+.menu-toggler {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+  padding: 0 16px;
+
+  .toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    font-family: Homemade Apple;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #A84301;
+    border: 1px solid #D96921;
+    background-color: #F9F9F9;
+    width: 33%;
+    height: 56px;
+    line-height: 20px;
+    padding: 5px 16px 2px 16px;
+    transition: 100ms ease-in-out;
+
+    &:nth-child(2) {
+      margin: 0 8px 0 8px;
+    }
+
+    &.on {
+      color: #FFF;
+      background-color: #D96921;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    
+    .toggle-button {
+      padding: 5px 8px 2px 8px;
+      font-size: 14px;
+    }
+  }
+}

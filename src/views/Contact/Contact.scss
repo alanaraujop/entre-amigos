@@ -1,0 +1,62 @@
+@import '../../styles/Base.scss';
+
+#Contact {
+  display: flex;
+  width: 100%;
+  margin-top: 56px;
+  min-height: 100vh;
+  background-color: $baseColor;
+
+  .contact-container {
+    display: flex;
+    margin-top: 35px;
+    align-items: flex-start;
+    align-self: flex-start;
+
+    .info-container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      .opens {
+        padding-left: 0;
+
+        .date-time {
+          text-align: left;
+          width: 100%;
+          max-width: 1144px;
+          padding: 25px 0;
+          display: flex;
+          flex-direction: column;
+
+          span {
+            margin-bottom: 3px;
+          }
+        
+          @media screen and (max-width: 768px) {
+            max-width: 80%;
+            min-width: 200px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+
+        .opens {
+          padding-left: 16px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+  }
+}

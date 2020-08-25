@@ -7,12 +7,42 @@
     <meta name="theme-color" content="#A84301" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Somos o antiquário vivo do Antiquárius"
     />
     <title>Entre Amigos Gastronomia</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #splash-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        animation: glow 1000ms infinite ease-in-out;
+      }
+
+      @keyframes glow {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="splash-screen"> 
+      <img src="%PUBLIC_URL%/logo.png" />
+    </div>
     <div id="root"></div>
   </body>
 </html>
