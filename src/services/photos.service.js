@@ -1,11 +1,11 @@
 export const getPhotos = async (_photosList) => {
-  const photosAsync = _photosList.map((img, index) => {
+  const photosAsync = _photosList.map(({ src }, index) => {
     return new Promise((resolve) => {
       const element = document.createElement("img");
-      element.src = img;
+      element.src = src;
       element.onload = () => {
         resolve({
-          src: img,
+          src,
           height: element.naturalHeight,
           width: element.naturalWidth,
         });
