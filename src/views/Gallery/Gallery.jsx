@@ -4,7 +4,7 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 
 import "./Gallery.scss";
 import { PhotoGrid } from "../../components";
-import { photosList } from "../../_mock/gallery";
+// import { photosList } from "../../_mock/gallery";
 import { getPhotos } from "../../services/photos.service";
 
 const Gallery = () => {
@@ -14,12 +14,18 @@ const Gallery = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    getPhotos(photosList).then((photosAsync) => {
-      photosAsync.forEach(async (item) => {
-        const photo = await item;
-        setPhotos((prev) => [...prev, photo]);
+    fetch(
+      "https://us-central1-entre-amigos-gastronomia.cloudfunctions.net/api/gallery/"
+    )
+      .then((res) => res.json())
+      .then((photosList) => {
+        getPhotos(photosList).then((photosAsync) => {
+          photosAsync.forEach(async (item) => {
+            const photo = await item;
+            setPhotos((prev) => [...prev, photo]);
+          });
+        });
       });
-    });
   }, []);
 
   const openLightbox = useCallback((event, { photo, index }) => {
