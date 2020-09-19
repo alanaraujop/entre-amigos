@@ -6,6 +6,7 @@ import "./Gallery.scss";
 import { PhotoGrid } from "../../components";
 // import { photosList } from "../../_mock/gallery";
 import { getPhotos } from "../../services/photos.service";
+import Loading from "../../components/Loading/Loading";
 
 const Gallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -41,6 +42,7 @@ const Gallery = () => {
 
   return (
     <div id="Gallery">
+      {photos.length === 0 && <Loading />}
       <PhotoGrid direction="row" photos={photos} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
