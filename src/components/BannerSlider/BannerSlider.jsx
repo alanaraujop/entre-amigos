@@ -9,12 +9,11 @@ const BannerSlider = () => {
   useEffect(() => {
     (async () => {
       const allSlides = await getCarousel();
-      console.log(allSlides);
       setSlides(allSlides);
     })();
   }, []);
 
-  if (!slides.length) return <div />;
+  // if (!slides.length) return <div />;
 
   return (
     <div className="carouselContainer">
