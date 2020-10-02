@@ -31,25 +31,27 @@ const BannerSlider = () => {
         centerMode={true}
         centerSlidePercentage={100}
       >
-        {slides.map(({ title, description, image, imageMobile }) => (
-          <div className="carouselItem">
-            <picture>
-              <source
-                media="(min-width: 900px)"
-                srcSet={image}
-                className="imagem"
-              />
-              <source media="(max-width: 901px)" srcSet={imageMobile} />
-              <img src={image} alt="Entre Amigos" />
-            </picture>
-            <div className="campaignContainer">
-              <div className="textContainer">
-                <h3>{title}</h3>
-                <p>{description}</p>
+        {slides.map(
+          ({ title, description, image, imageMobile, link = "#" }) => (
+            <a href={link} className="carouselItem">
+              <picture>
+                <source
+                  media="(min-width: 900px)"
+                  srcSet={image}
+                  className="imagem"
+                />
+                <source media="(max-width: 901px)" srcSet={imageMobile} />
+                <img src={image} alt="Entre Amigos" />
+              </picture>
+              <div className="campaignContainer">
+                <div className="textContainer">
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
+            </a>
+          )
+        )}
       </Carousel>
     </div>
   );
