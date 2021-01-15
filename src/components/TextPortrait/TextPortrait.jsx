@@ -29,7 +29,7 @@ const TextPortrait = props => {
 
           <div className="text-container text">
             <p>
-              De herança da antiga casa que comandávamos, além do aprendizado e experiência de tantos anos, restaram apenas os inúmeros clientes/amigos que ficaram “’orfãos”.
+              De herança da antiga casa que comandávamos, além do aprendizado e experiência de tantos anos, restaram apenas os inúmeros clientes/amigos que ficaram “orfãos”.
             </p>
           </div>
 
