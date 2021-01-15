@@ -23,19 +23,19 @@ const TextPortrait = props => {
 
           <div className="text-container text">
             <p>
-              No proeto liderado pela dupla de Maîtres, embarcaram a equipe de craques da cozinha: os chefs João Batista de Almeida, Sebastião de Souza, José Maria Fontes, Luiz Ademar e Francisco Viana. Como bem definiu Luciano: “Somos o antiquário vivo do Antiquárius”.
+              No projeto liderado por nós, embarcaram a equipe de craques da cozinha: os chefs João Batista de Almeida, Sebastião de Souza, José Maria Fontes, Luiz Ademar e Francisco Viana. Como afirmamos: “Somos o antiquário vivo do Antiquárius”.
             </p>
           </div>
 
           <div className="text-container text">
             <p>
-              De herança da antiga casa que comandavam, além do aprendizado e experiência de tantos anos, restaram apenas os inúmeros clientes/amigos que ficaram “’orfãos”.
+              De herança da antiga casa que comandávamos, além do aprendizado e experiência de tantos anos, restaram apenas os inúmeros clientes/amigos que ficaram “’orfãos”.
             </p>
           </div>
 
           <div className="text-container text">
             <p>
-              Através da indicação de um cliente amigo, chegaram ao local onde hoje funciona o restaurante, que não poderia levar outro nome que não fosse Entre Amigos Gastronomia.
+              Através da indicação de um cliente amigo, chegamos ao local onde hoje funciona o restaurante, que não poderia levar outro nome que não fosse Entre Amigos Gastronomia.
             </p>
           </div>
         </div>
