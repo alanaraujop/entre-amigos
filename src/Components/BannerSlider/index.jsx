@@ -10,16 +10,7 @@ import {
   TextContainer,
 } from "./styles";
 
-export default function BannerSlider() {
-  const [slides, setSlides] = useState([]);
-  useEffect(() => {
-    async function getDataCarousel() {
-      const allSlides = await getCarousel();
-      setSlides(allSlides);
-    }
-    getDataCarousel();
-  }, []);
-
+export default function BannerSlider({ slides }) {
   return (
     <>
       <ContainerCarrousel
