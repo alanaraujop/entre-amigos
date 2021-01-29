@@ -1,4 +1,4 @@
-import { BannerSlider } from "../src/Components/BannerSlider/BannerSlider";
+import BannerSlider from "../src/Components/BannerSlider";
 import { getCarousel } from "../src/services/carousel.service";
 
 export async function getStaticProps() {

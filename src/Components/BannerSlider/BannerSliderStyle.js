@@ -3,7 +3,7 @@ import Carrousel from "react-elastic-carousel";
 
 export const ContainerCarrousel = styled(Carrousel)`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 417px;
+  height: 374px;
   background-color: #fff;
   overflow: hidden;
 
@@ -16,14 +16,17 @@ export const ContainerCarrousel = styled(Carrousel)`
   @media (min-width: 325px) and (max-width: 360px) {
     height: 384px;
   }
-  @media (min-width: 375px) {
+  @media (min-width: 375px) and (max-width: 400px) {
     height: 392px;
   }
   @media (min-width: 411px) and (max-width: 700px) {
-    height: 404px;
+    height: 401px;
   }
   @media (min-width: 768px) and (max-width: 775px) {
     height: 518px;
+  }
+  @media (min-width: 1024px) and (max-width: 1030px) {
+    height: 402px;
   }
 
   .rec-carousel {
