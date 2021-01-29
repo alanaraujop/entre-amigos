@@ -3,10 +3,28 @@ import Carrousel from "react-elastic-carousel";
 
 export const ContainerCarrousel = styled(Carrousel)`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  min-height: 400px;
-  max-height: 768px;
+  height: 417px;
   background-color: #fff;
   overflow: hidden;
+
+  @media (max-width: 280px) {
+    height: 390px;
+  }
+  @media (min-width: 300px) and (max-width: 320px) {
+    height: 342px;
+  }
+  @media (min-width: 325px) and (max-width: 360px) {
+    height: 384px;
+  }
+  @media (min-width: 375px) {
+    height: 392px;
+  }
+  @media (min-width: 411px) and (max-width: 700px) {
+    height: 404px;
+  }
+  @media (min-width: 768px) and (max-width: 775px) {
+    height: 518px;
+  }
 
   .rec-carousel {
     width: 103%;
@@ -21,13 +39,22 @@ export const ContainerCarrousel = styled(Carrousel)`
   button {
     background-color: white;
     box-shadow: 0 0 1px 2px white;
-    margin: -42px 0 0 18px;
+    margin: -58px 0 0 18px;
     z-index: 5;
     width: 11px;
+
     height: 11px;
+    @media (max-width: 320px) {
+      margin-top: -40px;
+    }
     @media (max-width: 750px) {
       width: 9px;
       height: 9px;
+    }
+    @media (min-width: 1000px) and (max-width: 1024px) {
+      margin-top: -115px;
+      width: 15px;
+      height: 15px;
     }
     &:focus,
     &:hover {
@@ -41,7 +68,6 @@ export const PictureScenery = styled.picture`
   width: 100%;
   height: 100%;
   min-height: 400px;
-  object-fit: cover;
 `;
 
 export const TextContainer = styled.div`
@@ -118,7 +144,7 @@ export const CarrouselItem = styled.a`
 
 export const FloatingDivision = styled.div`
   width: 100%;
-  height: 15vh;
+  height: 20vh;
   max-height: 260px;
   position: absolute;
   bottom: 0;
@@ -128,9 +154,7 @@ export const FloatingDivision = styled.div`
     rgba(40, 39, 39, 0) 5.91%,
     rgba(40, 40, 40, 0.74) 95.31%
   );
-  @media (max-width: 750px) {
-    height: 20vh;
-  }
+
   @media (max-width: 280px) {
     height: 24vh;
   }

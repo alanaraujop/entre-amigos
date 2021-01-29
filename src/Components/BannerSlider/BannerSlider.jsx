@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
-import { getCarousel } from "../../services/carousel.service";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import {
   ContainerCarrousel,
   ImageCarrousel,
@@ -8,9 +7,15 @@ import {
   FloatingDivision,
   PictureScenery,
   TextContainer,
-} from "./styles";
+} from "./BannerSliderStyle";
 
-export default function BannerSlider({ slides }) {
+export function BannerSlider({ slides: data }) {
+  const [slides, setSlides] = useState([]);
+
+  useEffect(() => {
+    setSlides(data);
+  }, [data]);
+
   return (
     <>
       <ContainerCarrousel
