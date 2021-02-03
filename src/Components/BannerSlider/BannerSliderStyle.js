@@ -3,31 +3,11 @@ import Carrousel from "react-elastic-carousel";
 
 export const ContainerCarrousel = styled(Carrousel)`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 374px;
+  height: 300px;
+  min-height: 370px;
+  max-height: 400px;
   background-color: #fff;
   overflow: hidden;
-
-  @media (max-width: 280px) {
-    height: 390px;
-  }
-  @media (min-width: 300px) and (max-width: 320px) {
-    height: 342px;
-  }
-  @media (min-width: 325px) and (max-width: 360px) {
-    height: 384px;
-  }
-  @media (min-width: 375px) and (max-width: 400px) {
-    height: 392px;
-  }
-  @media (min-width: 411px) and (max-width: 700px) {
-    height: 401px;
-  }
-  @media (min-width: 768px) and (max-width: 775px) {
-    height: 518px;
-  }
-  @media (min-width: 1024px) and (max-width: 1030px) {
-    height: 402px;
-  }
 
   .rec-carousel {
     width: 103%;
@@ -45,19 +25,33 @@ export const ContainerCarrousel = styled(Carrousel)`
     margin: -58px 0 0 18px;
     z-index: 5;
     width: 11px;
-
     height: 11px;
-    @media (max-width: 320px) {
+
+    @media (min-width: 300px) and (max-width: 320px) {
       margin-top: -40px;
+    }
+
+    @media (min-width: 375px) and (max-width: 420px) {
+      margin-top: -70px;
+    }
+    @media (min-width: 540px) and (max-width: 600px) {
+      margin-top: -70px;
     }
     @media (max-width: 750px) {
       width: 9px;
       height: 9px;
     }
-    @media (min-width: 1000px) and (max-width: 1024px) {
-      margin-top: -115px;
-      width: 15px;
-      height: 15px;
+    @media (min-width: 768px) and (max-width: 775px) {
+      margin-top: -180px;
+    }
+    @media (min-width: 976px) and (max-width: 1000px) {
+      margin-top: -90px;
+    }
+    @media (min-width: 1000px) and (max-width: 1020px) {
+      margin-top: -75px;
+    }
+    @media (min-width: 1020px) and (max-width: 1028px) {
+      margin-top: -130px;
     }
     &:focus,
     &:hover {
@@ -159,9 +153,18 @@ export const FloatingDivision = styled.div`
   );
 
   @media (max-width: 280px) {
-    height: 24vh;
+    height: 30vh;
   }
-  @media (max-width: 320px) {
+  @media (min-width: 300px) and (max-width: 320px) {
     height: 26vh;
+  }
+  @media (min-width: 768px) and (max-width: 1000px) {
+    height: 25vh;
+  }
+  @media (min-width: 1000px) and (max-width: 1020px) {
+    height: 20vh;
+  }
+  @media (min-width: 1020px) and (max-width: 1028px) {
+    height: 15vh;
   }
 `;
