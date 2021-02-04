@@ -22,7 +22,7 @@ export const ContainerCarrousel = styled(Carrousel)`
   button {
     background-color: white;
     box-shadow: 0 0 1px 2px white;
-    margin: -85px 0 0 18px;
+    margin: -105px 0 0 18px;
     z-index: 5;
     width: 11px;
     height: 11px;
