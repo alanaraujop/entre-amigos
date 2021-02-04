@@ -50,9 +50,9 @@ export const ContainerCarrousel = styled(Carrousel)`
       margin-top: -230px;
     }
     @media screen and (min-width: 976px) and (max-width: 1000px) {
-      margin-top: -90px;
+      margin-top: -100px;
     }
-    @media screen and (min-width: 1020px) and (max-width: 1028px) {
+    @media screen and (min-width: 1024px) and (max-width: 1024px) {
       margin-top: -170px;
     }
 
@@ -164,9 +164,9 @@ export const FloatingDivision = styled.div`
     height: 28vh;
   }
   @media screen and (min-width: 1000px) and (max-width: 1020px) {
-    height: 20vh;
+    height: 25vh;
   }
-  @media screen and (min-width: 1020px) and (max-width: 1028px) {
+  @media screen and (min-width: 1024px) and (max-width: 1024px) {
     height: 14vh;
   }
 `;
