@@ -1,4 +1,4 @@
-import * as S from "./CloseButtonStyle";
+import * as S from "./CloseButton.Styles";
 
 export function CloseButton({ toggleModal }) {
   return (
