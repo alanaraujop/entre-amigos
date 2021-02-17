@@ -16,12 +16,13 @@
     "react-photo-gallery": "^8.0.0",
     "react-responsive-carousel": "^3.2.11",
     "styled-components": "^5.2.1",
+    "url-loader": "^4.1.1",
     "vanilla-masker": "^1.2.0",
     "yup": "^0.28.5"
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build ",
     "start": "next start"
   },
   "eslintConfig": {
