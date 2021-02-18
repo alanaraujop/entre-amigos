@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import * as S from "./BannerSliderStyle";
+import * as S from "./BannerSlider.Styles";
 
 export function BannerSlider({ slides: data }) {
   const [slides, setSlides] = useState([]);
