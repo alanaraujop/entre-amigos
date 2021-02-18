@@ -1,14 +1,7 @@
 import BannerSlider from "../src/Components/BannerSlider";
-import { useState, useEffect } from "react";
+import CloseButton from "../src/Components/CloseButton";
+import Footer from "../src/Components/Footer";
 import { getCarousel } from "../src/services/carousel.service";
-
-export default function Home({ slides }) {
-  return (
-    <div>
-      <BannerSlider slides={slides} />
-    </div>
-  );
-}
 
 export async function getStaticProps() {
   const slides = await getCarousel();
@@ -17,4 +10,13 @@ export async function getStaticProps() {
       slides,
     },
   };
+}
+export default function Home({ slides }) {
+  return (
+    <div>
+      <BannerSlider slides={slides} />
+      <CloseButton />
+      <Footer />
+    </div>
+  );
 }
