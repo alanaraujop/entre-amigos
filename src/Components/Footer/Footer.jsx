@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import * as S from "./Footer.styles";
+import * as S from "./Footer.Styles";
 
 export function Footer() {
   return (
