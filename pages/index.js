@@ -1,6 +1,7 @@
 import BannerSlider from "../src/Components/BannerSlider";
 import CloseButton from "../src/Components/CloseButton";
 import Footer from "../src/Components/Footer";
+import MenuMobile from "../src/Components/MenuMobile";
 import { getCarousel } from "../src/services/carousel.service";
 
 export async function getStaticProps() {
@@ -17,6 +18,7 @@ export default function Home({ slides }) {
       <BannerSlider slides={slides} />
       <CloseButton />
       <Footer />
+      <MenuMobile />
     </div>
   );
 }
