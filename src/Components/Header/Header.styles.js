@@ -4,7 +4,7 @@ import Image from "next/image";
 export const MasterContainerHeader = styled.section`
   display: flex;
   justify-content: space-between;
-  background-image: linear-gradient(black, transparent);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.808), transparent);
   height: 60px;
 `;
 export const Imagem = styled(Image)`
